@@ -16,17 +16,7 @@
 
         public override string ToString()
         {
-            StringBuilder result = new StringBuilder();
-            result.Append("OffsiteCourse { Name = ");
-            result.Append(base.ToString());
-            if (this.Town != null)
-            {
-                result.Append("; Town = ");
-                result.Append(this.Town);
-            }
-
-            result.Append(" }");
-            return result.ToString();
+            return this.ToStringHelper(new KeyValuePair<string, string>("Town", this.Town));
         }
     }
 }
