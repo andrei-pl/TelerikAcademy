@@ -38,6 +38,7 @@
     <Compile Include="Circle.cs" />
     <Compile Include="Figure.cs" />
     <Compile Include="FiguresExample.cs" />
+    <Compile Include="IFigure.cs" />
     <Compile Include="Rectangle.cs" />
   </ItemGroup>
   <ItemGroup>

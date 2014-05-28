@@ -1,26 +1,31 @@
-﻿using System;
-
-namespace Abstraction
+﻿namespace Abstraction
 {
-    abstract class Figure
+    using System;
+    using System.Collections.Generic;
+
+    public abstract class Figure : IFigure
     {
-        public virtual double Width { get; set; }
-        public virtual double Height { get; set; }
-        public virtual double Radius { get; set; }
+        public abstract double Perimeter { get; }
 
-        public Figure()
+        public abstract double Area { get; }
+
+        public override string ToString()
         {
+            List<string> info = new List<string>();
+
+            info.Add(string.Format("I am a {0}.", this.GetType().Name));
+            info.Add(string.Format("My perimeter is {0:F2}.", this.Perimeter));
+            info.Add(string.Format("My surface is {0:F2}.", this.Area));
+
+            return string.Join(" ", info);
         }
 
-        public Figure(double radius)
+        protected void PositiveExceptionHelper(double value, string property)
         {
-            this.Radius = radius;
-        }
-
-        public Figure(double width, double height)
-        {
-            this.Width = width;
-            this.Height = height;
+            if (value <= 0)
+            {
+                throw new ArgumentOutOfRangeException(property, "Value must be positive.");
+            }
         }
     }
 }
