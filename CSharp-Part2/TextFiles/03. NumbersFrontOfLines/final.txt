@@ -1,0 +1,37 @@
+1. using System;
+2. using System.IO;
+3. 
+4. namespace _03.NumbersFrontOfLines
+5. {
+6.     //Write a program that reads a text file and inserts line numbers in front of each of its lines. The result should be written to another text file.
+7. 
+8.     class NumbersFrontOfLines
+9.     {
+10.         static void Main(string[] args)
+11.         {
+12.             StreamReader fileForRead = new StreamReader(@"..\..\NumbersFrontOfLines.cs");
+13.             InputNumbersFrontEachLine(fileForRead);
+14.             Console.WriteLine("The final file is in .cs directory");
+15.         }
+16. 
+17.         static void InputNumbersFrontEachLine(StreamReader file)
+18.         {
+19.             StreamWriter final = new StreamWriter(@"..\..\final.txt");
+20.             using (file)
+21.             {
+22.                 string line = file.ReadLine();
+23. 
+24.                 using (final)
+25.                 {
+26.                     int count = 1;
+27.                     while (line != null)
+28.                     {
+29.                         final.WriteLine(count + ". " + line);
+30.                         line = file.ReadLine();
+31.                         count++;
+32.                     }
+33.                 }
+34.             }
+35.         }
+36.     }
+37. }
