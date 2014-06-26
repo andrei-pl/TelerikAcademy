@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reverse number</title>
+    <script>
+        function reverseNumber() {
+            var number = parseInt(document.getElementById("tb-first").value);
+            var strNumber = number.toString();
+            var newNumber = "";
+            var i;
+
+            for (i = strNumber.length - 1; i >= 0; i--) {
+                newNumber += strNumber[i];
+            }
+
+            document.getElementById("result").innerHTML = newNumber;
+        }
+    </script>
+
+</head>
+<body>
+    <!--
+      Write a function that reverses the digits of given decimal number. Example: 256  652
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Number: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="reverseNumber()" value="Reverse Number"/>
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

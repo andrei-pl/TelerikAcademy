@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Bigger than neighbours</title>
+    <script>
+        function isBigger() {
+            var arrayOfNumbers = document.getElementById("tb-first").value;
+            var index = parseInt(document.getElementById("tb-second").value);
+            var arr = arrayOfNumbers.split(" ");
+            var isBig = false;
+
+            if (arr[index] > arr[index - 1] && arr[index] > arr[index + 1]) {
+                isBig = true;
+            }
+
+            document.getElementById("result").innerHTML = isBig;
+        }
+    </script>
+</head>
+<body>
+    <!--
+            Write a function that checks if the element at given position in given array of integers is bigger than its two neighbors (when such exist).
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter Array (split with spaces): </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Enter position to check (start from 0): </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="isBigger()" value="Check is number bigger than his neighbours" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

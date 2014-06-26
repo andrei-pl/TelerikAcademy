@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Number appears</title>
+    <script>
+        function findNumber() {
+            var arrayOfNumbers = document.getElementById("tb-first").value;
+            var numberToSearch = document.getElementById("tb-second").value;
+            var arr = arrayOfNumbers.split(" ");
+            var i;
+            var count = 0;
+            var isExist = false;
+
+            for (i = 0; i < arr.length; i++) {
+                if (numberToSearch === arr[i]) {
+                    count++;
+                    isExist = true;
+                }
+            }
+
+            document.getElementById("result").innerHTML = isExist + ": " + count + " times";
+        }
+    </script>
+</head>
+<body>
+    <!--
+            Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter Array (split with spaces): </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Number for check: </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="findNumber()" value="Check is number exist in current array" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

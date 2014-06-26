@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Min and max</title>
+    <script>
+        function properties() {
+            for (var property in document) {
+                var minimalElement = property;
+                var maximalElement = property;
+                break;
+            }
+
+            for (property in document) {
+                if (property > maximalElement) {
+                    maximalElement = property;
+                }
+
+                if (property < document) {
+                    minimalElement = property;
+                }
+            }
+            document.getElementById('result').innerHTML = "Min: " + minimalElement + ", Max: " + maximalElement;
+        }
+    </script>
+</head>
+<body>
+    
+    <!--Write a script that finds the lexicographically smallest and largest property in document, window and navigator objects-->
+
+    <div id="inputdiv">
+        <div id="inputbutton">
+            <input type="button" onclick="properties()" value="Find Min and Max" />
+        </div>
+        <div>
+            <label id="result"></label>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Maximal sequence</title>
+    <script>
+        function printMaximalSequence() {
+            var arr = [2, 1, 1, 2, 3, 3, 2, 2, 2, 1];
+            var count = 1;
+            var value = arr[0];
+            var maxCount = 0;
+            var maxValue = 0;
+            var i;
+            var result = "";
+
+            for (i = 1; i < arr.length ; i++) {
+                if (value === arr[i]) {
+                    count++;
+                }
+                else {
+                    if (count > maxCount) {
+                        maxCount = count;
+                        maxValue = value;
+                    }
+                    count = 1;
+                    value = arr[i];
+                }
+            }
+            for (i = 1; i <= maxCount; i++) {
+                result += maxValue + " ";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+
+</head>
+<body>
+    <!--Write a script that finds the maximal sequence of equal elements in an array.
+    Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1}  {2, 2, 2}.-->
+
+    <div class="input">
+        <input type="text" disabled value="2, 1, 1, 2, 3, 3, 2, 2, 2, 1" style="width: 200px" />
+    </div>
+    <div id="inputdiv">
+        <div id="inputbutton">
+            <input type="button" onclick="printMaximalSequence()" value="Print maximal Sequence" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

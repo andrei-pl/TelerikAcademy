@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract from tags</title>
+    <script>
+        function extraxtText() {
+            var input = document.getElementById("tb-first").value;
+            var strArr = [];
+            var i;
+            var openTag = false;
+
+            for (i = 0; i < input.length; i++) {
+                if (input[i] === '<') {
+                    openTag = true;
+                }
+                if (openTag === false) {
+                    strArr.push(input[i]);
+                }
+                if (input[i] === '>') {
+                    openTag = false;
+                }
+            }
+
+            document.getElementById("result").innerHTML = strArr.join('');
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a function that extracts the content of a html page given as text. The function should return anything that is in a tag, without the tags:
+        <html><head><title>Sample site</title></head><body><div>text<div>more text</div>and more...</div>in body</body></html>
+
+        result:
+        Sample sitetextmore textand more...in body
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter code: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="extraxtText()" value="Extract text" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

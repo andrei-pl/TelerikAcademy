@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Deep Copy</title>
+    <script>
+        function deepCopy() {
+            var pesho = {
+                a: 5,
+                b: 6,
+                c: [1, 2, 3],
+                d: { a: 1, b: 2 },
+                toString: function () {
+                    return "a: " + this.a + ", b: " + this.b + ", c: " + this.c + ", d: " + this.d
+                }
+            }
+
+            var gosho = copyMe(pesho);
+
+            document.getElementById("result").innerHTML = gosho.toString();
+        }
+
+        function copyMe(obj) {
+            if (typeof (obj) !== "object")
+                return obj;
+            else {
+                var copyObj = {}
+                for (var prop in obj) {
+                    copyObj[prop] = copyMe(obj[prop]);
+                }
+                return copyObj;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a function that makes a deep copy of an object
+        The function should work for both primitive and reference types
+    -->
+    <div>
+        <div id="inputbutton">
+            <input type="button" onclick="deepCopy()" value="Deep Copy" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

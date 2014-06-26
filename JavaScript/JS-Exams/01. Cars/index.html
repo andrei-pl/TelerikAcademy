@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function Solve(input) {
+            var cells = input[0].split(' ').map(Number);
+            var row = 0;
+            var col = 0;
+            var values = []
+            var matrix = []
+            var counter = 1;
+
+            for (var i = 0; i < cells[0]; i++) {
+                values[i] = input[i + 1].split(' ').map(function (item) { return item.trim(); });
+                matrix[i] = []
+                counter = Math.pow(2, i);
+                for (var j = 0; j < cells[1]; j++) {
+                    matrix[i][j] = counter++;
+                }
+            }
+
+            var isOut = false;
+            var result = 0;
+            var count = 0;
+
+            while (true) {
+                if (row >= cells[0] || row < 0 || col >= cells[1] || col < 0) {
+                    isOut = true;
+                    break;
+                }
+                if (matrix[row][col] === 0) {
+                    isOut = false;
+                    break;
+                }
+
+                result += matrix[row][col];
+                count++;
+                matrix[row][col] = 0;
+                var value = values[row][col];
+                switch (value) {
+                    case 'dl': col--; row++; break;
+                    case 'dr': col++; row++; break;
+                    case 'ul': row--; col--; break;
+                    case 'ur': row--; col++; break;
+                }
+            }
+
+            console.log(isOut ? 'successed with ' + result : 'failed at (' + row + ', ' + col + ')');
+        }
+        var x = [
+        '3 5',
+  'dr dl dr ur ul',
+  'dr dr ul ur ur',
+  'dl dr ur dl ur'
+        ];
+
+        function Solver() {
+            Solve(x);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="Solver()" value="Click me" />
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Html UL</title>
+    <script>
+        function generateList() {
+            var people = [
+                { name: "Peter", age: 28 },
+                { name: "Ivan", age: 39 },
+                { name: "Georgi", age: 26 }
+            ];
+
+            var template = document.getElementById("tb-second").value;
+            template = template.trim();
+
+            var pattern = /-{(\w+)}-/g;
+
+            var UL = createUnorderedList(people, template, pattern);
+            document.getElementById("result").innerHTML = UL;
+        }
+
+        function createListItem(obj, template, pattern) {
+            var result = "<li>";
+
+            result += template.replace(pattern, function (match, capture) { return obj[capture]; });
+
+            result += "</li>";
+            return result;
+        }
+
+        function createUnorderedList(obj, template, pattern) {
+            var strArr = [];
+            strArr.push("<ul>");
+
+            for (var i = 0; i < obj.length; i++) {
+                var listItem = createListItem(obj[i], template, pattern);
+                strArr.push(listItem);
+            }
+
+            strArr.push("</ul>");
+
+            return strArr.join('');
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a function that creates a HTML UL using a template for every HTML LI.
+        The source of the list should an array of elements.
+        Replace all placeholders marked with –{…}–   with the value of the corresponding property of the object.
+        Example:
+
+        <div data-type="template" id="list-item">
+        <strong>-{name}-</strong> <span>-{age}-</span>
+        </div>
+      
+        var people = [{name: "Peter", age: 14},{name: "Peter", age: 14}];
+        var tmpl = document.getElementById("list-item").innerHtml;
+        var peopleList = generateList(people,template);
+        //peopleList = "<ul><li><strong>Peter</strong> <span>14</span></li><li>…</li>…</ul>"
+    -->
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Array of elements: </label>
+            <input type="text" id="tb-first" autocomplete="on" disabled value='{ name: " peter", age 28 }, { name "Ivan" , age 39 }, { name "Georgi" , age 26 }' style="width: 500px" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Enter format: </label>
+            <input type="text" id="tb-second" autocomplete="on" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="generateList()" value="Make list" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

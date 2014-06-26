@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Is third digit 7</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Number: </label>
+            <input type="text" id="tb-first" />
+            <label id="result"></label>
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="checkThirdDigit()">Is third digit 7</a>
+        </div>
+    </div>
+    <script>
+        function checkThirdDigit() {
+            var first = document.getElementById("tb-first").value;
+
+            var buffer = parseInt(first / 100)
+            if (buffer % 10 === 7) {
+                document.getElementById("result").innerHTML = "Third digit (right to left) of number: " + first + " is 7";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Third digit (right to left) of number: " + first + " is NOT 7";
+            }
+        }
+    </script>
+</body>
+</html>

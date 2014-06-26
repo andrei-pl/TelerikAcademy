@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Is in area</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter X: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Enter Y: </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="isInArea()">Is point in circle K((1,1),3) and out of rectangle R(top=1, left=-1, width=6, height=3)</a>
+        </div>
+        <div>
+            <label id="result"></label>
+        </div>
+    </div>
+    <script>
+        function isInArea() {
+            var X = parseInt(document.getElementById("tb-first").value);
+            var Y = parseInt(document.getElementById("tb-second").value);
+            var Xc = 1;
+            var Yc = 1;
+            var radius = 3;
+            var XL = -1;
+            var YL = 1;
+            var width = 6;
+            var height = 3;
+            var XR = XL + width;
+            var YR = YL - height;
+            var InCircle = false;
+            var InRec = false;
+
+            if (((X - Xc) * (X - Xc) + (Y - Yc) * (Y - Yc)) < radius * radius) {
+                InCircle = true;
+            }
+            else {
+                InCircle = false;
+            }
+
+            if ((X > XL && X < XR) && (Y < YL && Y > YR)) {
+                InRec = true;
+            }
+            else {
+                InRec = false;
+            }
+            document.getElementById("result").innerHTML = InCircle.toString() + InRec.toString();
+            if (InCircle === true && InRec === false) {
+                document.getElementById("result").innerHTML = "Point (" + X + "," + Y + ") is within circle K((" + Xc + "," + Yc + ")," + radius + ") and out of rectangle R(top=" + YL + ", left=" + XL + ", width=" + width + ", height=" + height + ").";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Point (" + X + "," + Y + ") is within circle K((" + Xc + "," + Yc + ")," + radius + ") and out of rectangle R(top=" + YL + ", left=" + XL + ", width=" + width + ", height=" + height + ") is NOT correct.";
+            }
+
+        }
+    </script>
+</body>
+</html>

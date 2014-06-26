@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Most frequent number</title>
+    <script>
+        function mostFrequentNumber() {
+            var arr = [4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3];
+            arr.sort();
+
+            var start = 0;
+            var len = 1;
+            var bestStart = 0;
+            var bestLen = 1;
+
+            for (i = 0; i < arr.length - 1; i++) {
+                if (arr[i] !== arr[i + 1]) {
+                    len = 1;
+                    start = i + 1;
+                } else {
+                    len++;
+                }
+                if (len > bestLen) {
+                    bestLen = len;
+                    bestStart = start;
+                }
+            }
+            document.getElementById("result").innerHTML = arr[bestStart] + " -> (" + bestLen + " times)";
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a program that finds the most frequent number in an array.
+        Example:
+        {4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3} -> 4 (5 times)
+    -->
+
+    <div class="input">
+        <input type="text" disabled value="4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3" style="width: 200px" />
+    </div>
+    <div id="inputdiv">
+        <div id="inputbutton">
+            <input type="button" onclick="mostFrequentNumber()" value="Most frequent number" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

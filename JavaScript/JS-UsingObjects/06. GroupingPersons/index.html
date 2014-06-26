@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sort People</title>
+    <script>
+        var persons = [
+                      { firstName: "Gosho", lastName: "Petrov", age: 32 },
+                      { firstName: "Bay", lastName: "Ivan", age: 81 },
+                      { firstName: "Pesho", lastName: "Peshov", age: 19 }
+        ];
+
+        function sortPeople() {
+            var propName = document.getElementById("tb-first").value;
+            var grouped = group(persons, propName);
+            var result = '';
+
+            for (var i in grouped) {
+                result += i + " ";
+            }
+            console.log(result);
+            document.getElementById("result").innerHTML = result;
+
+        }
+
+        function group(person, property) {
+            var array = new Array();
+            for (var i = 0; i < person.length; i++) {
+
+                for (var j in person[i]) {
+
+                    if (j === property) {
+                        array.push(person[i][j]);
+                    }
+                }
+            }
+
+            var wordsCount = {};
+            var word = {};
+            for (var prop in array) {
+                word = array[prop];
+                if (wordsCount[word]) {
+                    wordsCount[word]++;
+                }
+                else {
+                    wordsCount[word] = 1;
+                }
+            }
+
+            return wordsCount;
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a function that groups an array of persons by age, first or last name. The function must return an associative array,
+        with keys - the groups, and values -arrays with persons in this groups
+        Use function overloading (i.e. just one function)
+
+        var persons = {…};
+        var groupedByFname = group(persons,"firstname");
+        var groupedByAge= group(persons,"age");
+    -->
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter how to sort: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="sortPeople()" value="Sort" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

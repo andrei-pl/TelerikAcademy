@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Array of integers</title>
+    <script>
+        function printArray() {
+            var arr = new Array(20);
+            var i;
+            for (i = 0; i < arr.length; i++) {
+                arr[i] = i * 5;
+            }
+            document.getElementById("result").innerHTML = arr.join(" ");
+        }
+    </script>
+</head>
+<body>
+    <!--Write a script that allocates array of 20 integers and initializes each element by its index multiplied by 5. Print the obtained array on the console.-->
+
+    <div id="inputdiv">
+        <div id="inputbutton">
+            <input type="button" onclick="printArray()" value="Print Array" />
+        </div>
+        <label id="result"></label>
+    </div>
+</body>
+</html>

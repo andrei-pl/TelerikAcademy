@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Search for palindromes</title>
+    <script>
+        function searchPalindromes() {
+            var input = document.getElementById("tb-first").value;
+
+            var match = input.match(/\w+/g);  //using regex
+            var result = '';
+            var i;
+
+            if (input === "") {
+                return document.getElementById("result").innerHTML = "Enter some text";
+            }
+
+            if (match !== null) {
+                for (i = 0; i < match.length; i++) {
+                    if (isPalindrome(match[i])) {
+                        result += match[i] + " ";
+                    }
+                }
+            }
+
+            if (result.length !== 0) {
+                document.getElementById("result").innerHTML = result;
+            } else {
+                document.getElementById("result").innerHTML = "No palindromes";
+            }
+        }
+
+        function isPalindrome(str) {
+            for (var i = 0; i < str.length / 2; i++)
+                if (str[i] !== str[str.length - 1 - i] || str.length < 2) {
+                    return false;
+                }
+            return true;
+        }
+
+    </script>
+</head>
+<body>
+    <!--
+       Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe".
+    -->
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter text: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="searchPalindromes()" value="Search for palindromes" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Numbers</title>
+    <script>
+        function numbers() {
+            var number = document.getElementById('tb-first').value;
+            var i = 1;
+            var result = "";
+
+            for (i = 1; i <= number; i++) {
+                if (i % 21 != 0) {
+                    result += i + " ";
+                }
+            }
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <!--
+           Write a script that prints all the numbers from 1 to N, that are not divisible by 3 and 7 at the same time
+    -->
+   <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Number: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="numbers()" value="Generate numbers" />
+        </div>
+        <div>
+            <label id="result"></label>
+        </div>
+    </div>
+</body>
+</html>

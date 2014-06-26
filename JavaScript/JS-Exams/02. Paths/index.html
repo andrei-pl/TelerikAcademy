@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function Solve(params) {
+            var number = params;
+            var cars = 4;
+            var trucks = 10;
+            var trikes = 3;
+            var result = 0;
+            var temp = 0;
+
+            var carsCount = parseInt(number / cars);
+            var trucksCount = parseInt(number / trucks);
+            var trikesCount = parseInt(number / trikes);
+
+            for (var trikesIndex = 0; trikesIndex <= trikesCount; trikesIndex++) {
+                for (var carsIndex = 0; carsIndex <= carsCount; carsIndex++) {
+                    for (var trucksIndex = 0; trucksIndex <= trucksCount; trucksIndex++) {
+                        temp = trucksIndex * trucks + carsIndex * cars + trikesIndex * trikes;
+
+                        if (temp == number) {
+                            result++;
+                        }
+                        temp = 0;
+                    }
+                }
+            }
+
+            console.log(result);
+        }
+
+        var x = 40;
+
+        function Solver() {
+            Solve(x);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="Solver()" value="Click me" />
+</body>
+</html>

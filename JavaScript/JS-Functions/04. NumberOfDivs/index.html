@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Count Divs</title>
+    <script>
+        function countDivs() {
+            var elementType = "div";
+            var divCount = countElements(elementType);
+            document.getElementById("result").innerHTML = divCount + " div tags";
+        }
+        function countElements(elementType) {
+            var arr = document.getElementsByTagName(elementType);
+            return arr.length;
+        }
+    </script>
+</head>
+<body>
+    <!--
+            Write a function to count the number of divs on the web page
+    -->
+
+    <div id="inputdiv">
+        <div id="inputbutton">
+            <input type="button" onclick="countDivs()" value="Visualize number of divs on this web page" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

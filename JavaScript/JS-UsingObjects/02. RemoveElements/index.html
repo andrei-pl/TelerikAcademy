@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Remove elements</title>
+    <script>
+        function removeElements() {
+        var arr = document.getElementById("tb-first").value.split(" ");
+        var number = document.getElementById("tb-second").value;
+        var newArr = arr.remove(number);
+
+        document.getElementById("result").innerHTML = "New array is: " + newArr.join(',');
+    }					
+
+    (function () {
+        if (!Array.prototype.remove) {
+            Array.prototype.remove = function (value) {
+                if (this === null) {
+                    throw new TypeError();
+                }
+
+                var resultArr = [];
+
+                var size = this.length;
+                for (var i = 0; i < size; i++) {
+                    if (this[i] !== value) {
+                        resultArr.push(this[i]);
+                    }
+                }
+                return resultArr;
+            }
+        }
+    })();
+    </script>			  
+</head>
+<body>
+    <!--
+        Write a function that removes all elements with a given value
+
+        var arr = [1,2,1,4,1,3,4,1,111,3,2,1,"1"];
+        arr.remove(1); //arr = [2,4,3,4,111,3,2,"1"];
+
+        Attach it to the array type
+        Read about prototype and how to attach methods
+    -->
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Insert array elements separated by space: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Number for remove: </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="removeElements()" value="Remove elements" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Change to HTML</title>
+    <script>
+        function changeTags() {
+            var input = document.getElementById("tb-first").value;
+
+            //var result = input.replace(/<a href="(.*?)">(.*?)<\/a>/g, '[URL=$1]$2[/URL]')     //with regex
+            var result = input;
+
+            //while ((result.indexOf('<a')) !== -1) {                      //replace method without regex
+            //    result = result.replace('<a href="', '[URL=');        
+            //    result = result.replace('">', ']');
+                result = result.replace(/<a href="/g, '[URL=');  //regex separated
+                result = result.replace(/">/g, ']');
+                result = result.replace(/<\/a>/g, '[/URL]');
+           // }
+            result = result.replace(/</g, '&lt;');
+            result = result.replace(/>/g, '&gt;');
+
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a JavaScript function that replaces in a HTML document given as string all the tags <a href="…">…</a> with corresponding tags [URL=…]…/URL]. 
+        Sample HTML fragment:
+
+        <p>Please visit <a href="http://academy.telerik. com">our site</a> to choose a training course. 
+        Also visit <a href="www.devbg.org">our forum</a> to discuss the courses.</p>
+
+        <p>Please visit [URL=http://academy.telerik. com]our site[/URL] to choose a training course. 
+        Also visit [URL=www.devbg.org]our forum[/URL] to discuss the courses.</p>
+    -->
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter url: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="changeTags()" value="Change tags" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

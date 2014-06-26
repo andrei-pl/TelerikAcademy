@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function Solve(input) {
+            var cells = input[0].split(' ').map(Number);
+            var row = cells[0] - 1;
+            var col = cells[1] - 1;
+            var values = []
+            var matrix = []
+            var counter = 1;
+
+            for (var i = 0; i < cells[0]; i++) {
+                values[i] = input[i + 1].split('');
+                matrix[i] = []
+                counter = Math.pow(2, i);
+                for (var j = 0; j < cells[1]; j++) {
+                    matrix[i][j] = counter--;
+                }
+            }
+
+            var isOut = false;
+            var result = 0;
+            var count = 0;
+
+            while (true) {
+                if (row >= cells[0] || row < 0 || col >= cells[1] || col < 0) {
+                    isOut = true;
+                    break;
+                }
+                if (matrix[row][col] === 'x') {
+                    isOut = false;
+                    break;
+                }
+
+                result += matrix[row][col];
+                count++;
+                matrix[row][col] = 'x';
+                var value = parseInt(values[row][col]);
+                switch (value) {
+                    case 1: col += 1; row -= 2; break;
+                    case 2: row -= 1; col += 2; break;
+                    case 3: row += 1; col += 2; break;
+                    case 4: row += 2; col += 1; break;
+                    case 5: row += 2; col -= 1; break;
+                    case 6: row += 1; col -= 2; break;
+                    case 7: row -= 1; col -= 2; break;
+                    case 8: row -= 2; col -= 1; break;
+                }
+            }
+
+            console.log(isOut ? 'Go go Horsy! Collected ' + result + ' weeds' : 'Sadly the horse is doomed in ' + count + ' jumps');
+        }
+
+        var x = [
+            '3 5',
+  '54361',
+  '43326',
+  '52188',
+
+        ];
+
+        function Solver() {
+            Solve(x);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="Solver()" value="Click me" />
+</body>
+</html>

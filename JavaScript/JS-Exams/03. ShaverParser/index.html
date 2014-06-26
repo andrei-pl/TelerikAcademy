@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function Solve(input) {
+            var numberKeyValues = parseInt(input[0]);
+            var keyArray = [];
+            for (var i = 1; i <= numberKeyValues; i++) {
+                var arrKey = input[i].split(':');
+                keyArray[i - 1] = {};
+                keyArray[i - 1].Key = arrKey[0].trim();
+                keyArray[i - 1].Value = arrKey[1].trim();
+            }
+            var numberRows = parseInt(input[numberKeyValues + 1]);
+            var rowsForWork = [];
+            for (var j = numberKeyValues + 2; j <= numberKeyValues + numberRows + 1; j++) {
+                rowsForWork[j - numberKeyValues - 2] = input[j];
+            }
+            
+
+            console.log();
+        }
+        var x = [
+        6,
+            'title:Telerik Academy',
+            'showSubtitle:true',
+            'subTitle:Free training',
+            'showMarks:false',
+            'marks:3,4,5,6',
+            'students:Pesho,Gosho,Ivan',
+        42,
+'@section menu {',
+    '<ul id="menu">',
+        '<li>Home</li>',
+        '<li>About us</li>',
+    '</ul>',
+'}',
+'@section footer {',
+    '<footer>',
+        'Copyright Telerik Academy 2014',
+    '</footer>',
+'}',
+        '<!DOCTYPE html>',
+        '<html>',
+        '<head>',
+            '<title>Telerik Academy</title>*',
+        '</head>',
+        '<body>',
+            '@renderSection("menu")',
+            ' ',
+            '<h1>@title</h1>',
+    '@if (showSubtitle) {',
+        '<h2>@subTitle</h2>',
+        '<div>@@JustNormalTextWithDoubleKliomba ;)</div>',
+    '}',
+    ' ',
+        '<ul>',
+            '@foreach (var student in students) {',
+                '<li>',
+                    '@student ',
+                '</li>',
+                '<li>Multiline @title</li>',
+            '}',
+        '</ul>',
+    '@if (showMarks) {',
+        '<div>',
+            '@marks ',
+        '</div>',
+    '}',
+' ',
+    '@renderSection("footer")',
+'</body>',
+'</html>'
+        ];
+
+        function Solver() {
+            Solve(x);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="Solver()" value="Click me" />
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Biggest number</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">First number: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Second number: </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="Exchange()">Find bigger</a>
+        </div>
+        <label id="result"></label>
+    </div>
+    <script>
+        function Exchange() {
+            var first = parseFloat(document.getElementById("tb-first").value);
+            var second = parseFloat(document.getElementById("tb-second").value);
+            var buffer;
+
+            if (first > second) {
+                buffer = first;
+                first = second;
+                second = buffer;
+            }
+
+            document.getElementById("result").innerHTML = "the bigger is: " + second;
+        }
+    </script>
+</body>
+</html>

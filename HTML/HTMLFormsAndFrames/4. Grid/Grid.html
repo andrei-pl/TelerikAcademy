@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1251" />
+    <title>Grid</title>
+    <style type="text/css">
+        table, td, th {
+            border: 2px solid;
+            border-collapse: collapse;
+            border-color: lightblue;
+            border-radius: 3px;
+        }
+
+        td, th {
+            text-align: left;
+            font-family: Arial;
+            padding: 2px;
+            font-size: 10pt;
+        }
+
+        th, tfoot td {
+            border-color: #c8c9ca;
+            background-color: #e1e6ea;
+        }
+
+        tbody tr:last-child td {
+            border-bottom-color: #c8c9ca;
+        }
+
+        #col1 {
+            width: 10%;
+        }
+
+        #col2 {
+            width: 35%;
+        }
+
+        #col3 {
+            width: 15%;
+        }
+
+        #col4 {
+            width: 20%;
+        }
+
+        #col5 {
+            width: 15%;
+        }
+
+        #col6 {
+            width: 5%;
+        }
+
+        input[type="text"], input[type="image"] {
+            margin-top: 1px;
+            margin-bottom: 2px;
+            border-color: #c8c9ca;
+            border-style: solid;
+            border-radius: 3px;
+            vertical-align: top;
+        }
+
+        #pagesize {
+            border-color: #c8c9ca;
+        }
+
+        #idtext {
+            width: 50%;
+        }
+
+        #nametext {
+            width: 65%;
+        }
+
+        #pricetext, #quantitytext, #unitstext {
+            width: 70%;
+        }
+
+        #total {
+            float: right;
+            padding: 2px;
+        }
+
+        a.page {
+            padding: 1px 1px 1px 1px;
+            background-color: #DFE3E8;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -khtml-border-radius: 3px;
+            border-radius: 3px;
+            color: #121212;
+            text-decoration: none;
+        }
+
+        a.active {
+            border: 1px solid #ff0000;
+            color: darkblue;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col id="col1" />
+            <col id="col2" />
+            <col id="col3" />
+            <col id="col4" />
+            <col id="col5" />
+            <col id="col6" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th colspan="6">Drag a column header and drop it here to group by that column</th>
+            </tr>
+            <tr>
+                <th>ProductID</th>
+                <th>Product name</th>
+                <th>Unit price</th>
+                <th>Quantity per unit</th>
+                <th>Units in stock</th>
+                <th>Discontinued</th>
+            </tr>
+            <tr>
+                <th><input type="text" id="idtext" /></th>
+                <th><input type="text" id="nametext" /></th>
+                <th>
+                    <input type="text" id="pricetext" />
+                    <input type="image" src="flask.png" alt="image" width="16" height="16" />
+                </th>
+                <th><input type="text" id="quantitytext" /></th>
+                <th>
+                    <input type="text" id="unitstext" />
+                    <input type="image" src="flask.png" alt="image" width="16" height="16" />
+                </th>
+                <th>
+                    <input type="checkbox" name="discont" />
+                    <input type="image" src="flask.png" alt="image" width="16" height="16" />
+                </th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="6">
+                    <div>
+                        <input type="image" src="backward.png" alt="endleft" width="16" height="16" />
+                        <input type="image" src="back.png" alt="left" width="16" height="16" />
+                        <a href="#" class="page active">1</a> &nbsp;
+                        <a href="#" class="page">2</a> &nbsp;
+                        <a href="#" class="page">3</a> &nbsp;
+                        <a href="#" class="page">4</a> &nbsp;
+                        <a href="#" class="page">5</a> &nbsp;
+                        <a href="#" class="page">6</a> &nbsp;
+                        <a href="#" class="page">7</a> &nbsp;
+                        <a href="#" class="page">8</a> &nbsp;
+                        <a href="#" class="page">9</a> &nbsp;
+                        <a href="#" class="page">10</a> 
+                        <span>...</span>
+                        <input type="image" src="forward.png" alt="right" width="16" height="16" />
+                        <input type="image" src="forward_end.png" alt="endright" width="16" height="16" />
+                        &nbsp;&nbsp;
+                        <label for="pagesize">Page size</label>
+                        <select name="page" id="pagesize">
+                            <option value="1" selected="selected">10</option>
+                            <option value="2">20</option>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span id="total">335104 items in 33511 pages</span>
+                    </div>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Chai</td>
+                <td>$18.00</td>
+                <td>10 boxes x 20 bags</td>
+                <td>39</td>
+                <td><input type="checkbox" name="discont" /></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Chang</td>
+                <td>$19.00</td>
+                <td>24 - 12 oz bottles</td>
+                <td>17</td>
+                <td><input type="checkbox" name="discont" /></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Aniseed Syrup</td>
+                <td>$10.00</td>
+                <td>12 - 550 ml bottles</td>
+                <td>13</td>
+                <td><input type="checkbox" name="discont" /></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Chef Anton's Cajun Seasoning</td>
+                <td>$22.00</td>
+                <td>48 - 6 oz jars</td>
+                <td>53</td>
+                <td><input type="checkbox" name="discont" /></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Chef Anton's Gumbo Mix</td>
+                <td>$21.35</td>
+                <td>36 boxes</td>
+                <td>0</td>
+                <td><input type="checkbox" disabled="disabled" checked="checked" name="discont" /></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Grandma's Boysenberry Spread</td>
+                <td>$25.00</td>
+                <td>12 - 8 oz jars</td>
+                <td>120</td>
+                <td><input type="checkbox" name="discont" /></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Uncle Bob's Organic Dried Pears</td>
+                <td>$30.00</td>
+                <td>12 - 1 lb pkgs.</td>
+                <td>15</td>
+                <td><input type="checkbox" name="discont" /></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Northwoods Cranberry Sauce</td>
+                <td>$40.00</td>
+                <td>12 - 22 oz jars</td>
+                <td>6</td>
+                <td><input type="checkbox" name="discont" /></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Mishi Kobe Niku</td>
+                <td>$97.00</td>
+                <td>18 - 500 g pkgs.</td>
+                <td>29</td>
+                <td><input type="checkbox" checked="checked" disabled="disabled" name="discont" /></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Ikura</td>
+                <td>$31.00</td>
+                <td>12 - 200 ml jars</td>
+                <td>31</td>
+                <td><input type="checkbox" name="discont" /></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

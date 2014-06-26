@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Biggest of 3 integers</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">First number: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Second number: </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div class="input">
+            <label for="tb-third">Third number: </label>
+            <input type="text" id="tb-third" />
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="findBiggest()">Find biggest</a>
+        </div>
+        <div>
+            <span id="result"></span>
+        </div>
+    </div>
+    <script>
+        function findBiggest() {
+            var first = parseInt(document.getElementById("tb-first").value);
+            var second = parseInt(document.getElementById("tb-second").value);
+            var third = parseInt(document.getElementById("tb-third").value);
+            
+            var theBiggest = first;
+
+            if (theBiggest < second) {
+                theBiggest = second;
+            }
+            if (theBiggest < third) {
+                theBiggest = third;
+            }
+            var printStr = "The biggest number of ";
+            printStr += first + "; ";
+            printStr += second + "; ";
+            printStr += third + " is " + theBiggest;
+            document.getElementById("result").innerHTML = printStr;
+        }
+    </script>
+</body>
+</html>

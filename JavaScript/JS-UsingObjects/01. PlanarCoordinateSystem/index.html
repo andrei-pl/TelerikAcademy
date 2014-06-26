@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Planar Coordinate System</title>
+    <script>
+        function calculateDistance() {
+            var PointA = new Point(5, 6);
+            var PointB = new Point(12, 8);
+            var LineAB = new Line(PointA, PointB);
+
+            document.getElementById("pointA").innerHTML = "Point A: " + PointA.toString();
+            document.getElementById("pointB").innerHTML = "Point B: " + PointB.toString();
+            document.getElementById("lineAB").innerHTML = "Line AB: " + LineAB.toString();
+
+            var dist = Distance(PointA, PointB);
+
+            document.getElementById("distanceAB").innerHTML = "Distance between Point A and B: " + dist;
+
+            var PointC = new Point(8, 10);
+            document.getElementById("pointC").innerHTML = "Point C: " + PointC.toString();
+            var LineBC = new Line(PointB, PointC);
+            var LineAC = new Line(PointA, PointC);
+            document.getElementById("lineBC").innerHTML = "Line BC: " + LineBC.toString();
+            document.getElementById("lineAC").innerHTML = "Line AC: " + LineAC.toString();
+
+            if (canMakeTriangle) {
+                document.getElementById("result").innerHTML = "Line AB,BC,AC can make a triangular.";
+            }
+            else {
+                document.getElementById("result").innerHTML = "Line AB,BC,AC can NOT make a triangular.";
+            }
+        }
+
+        function Point(x, y) {
+            return {
+                x: x,
+                y: y,
+                toString: function () { return "P(" + this.x + "," + this.y + ");" }
+            }
+        }
+
+        function Line(p1, p2) {
+            return {
+                startPoint: p1,
+                endPoint: p2,
+                getLength: Distance(p1, p2),
+                toString: function () {
+                    return "L(P1(" + this.startPoint.x + "," + this.startPoint.y + "),P2(" + this.endPoint.x + "," + this.endPoint.y + "));"
+                }
+            }
+        }
+
+        function Distance(start, end) {
+            return Math.sqrt((end.x - start.x) * (end.x - start.x) + (end.y - start.y) * (end.y - start.y));
+        }
+
+        function canMakeTriangle(l1, l2, l3) {
+            var a = l1.getLength();
+            var b = l2.getLength();
+            var c = l3.getLength();
+            var result = a + b > c && a + c > b && b + c > a;
+            return result;
+        }
+    </script>
+</head>
+<body>
+    <!--
+        write functions for working with shapes in standard planar coordinate system
+
+        points are represented by coordinates p(x, y)
+        lines are represented by two points, marking their beginning and ending
+        l(p1(x1,y1), p2(x2,y2))
+        calculate the distance between two points
+        check if three segment lines can form a triangle
+    -->
+    <div id="inputdiv">
+        <div id="inputbutton">
+            <input type="button" onclick="calculateDistance()" value="Calculate Distance" />
+        </div>
+        <div id="pointA"></div>
+        <div id="pointB"></div>
+        <div id="lineAB"></div>
+        <div id="distanceAB"></div>
+        <div id="pointC"></div>
+        <div id="lineAC"></div>
+        <div id="lineBC"></div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

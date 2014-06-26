@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find index of a number</title>
+    <script>
+        function lastDigitName() {
+            var number = parseInt(document.getElementById("tb-first").value);
+            var digit = number % 10;
+
+            if (digit < 0) {
+                digit *= -1;
+            }
+
+            switch (digit) {
+                case 0: document.getElementById("result").innerHTML = "zero"; break;
+                case 1: document.getElementById("result").innerHTML = "one"; break;
+                case 2: document.getElementById("result").innerHTML = "two"; break;
+                case 3: document.getElementById("result").innerHTML = "three"; break;
+                case 4: document.getElementById("result").innerHTML = "four"; break;
+                case 5: document.getElementById("result").innerHTML = "five"; break;
+                case 6: document.getElementById("result").innerHTML = "six"; break;
+                case 7: document.getElementById("result").innerHTML = "seven"; break;
+                case 8: document.getElementById("result").innerHTML = "eight"; break;
+                case 9: document.getElementById("result").innerHTML = "nine"; break;
+                default: document.getElementById("result").innerHTML = "Invalid value."; break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--
+       Write a function that returns the last digit of given integer as an English word. Examples: 512  "two", 1024  "four", 12309  "nine"
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Number: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="lastDigitName()" value="Name of last digit" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

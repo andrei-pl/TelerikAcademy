@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find index of a number</title>
+    <script>
+        function findIndex() {
+            var arr = new Array(1, 2, 3, 4, 5, 6, 8, 9, 11, 14, 21, 32, 54);
+
+            var num = parseInt(document.getElementById("tb-first").value);
+            var isFound = false;
+            var left = 0;
+            var right = arr.length - 1;
+            var index;
+
+            while (left <= right && isFound === false) {
+                var mid = ((left + right) / 2) | 0;
+
+                if (arr[mid] === num) {
+                    index = mid;
+                    isFound = true;
+                }
+                else if (arr[mid] > num) {
+                    right = mid - 1;
+                }
+                else {
+                    left = mid + 1;
+                }
+            }
+            document.getElementById("result").innerHTML = index;
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a program that finds the index of given element in a sorted array of integers by using the binary search algorithm (find it in Wikipedia).
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <input type="text" disabled value="1, 2, 3, 4, 5, 6, 8, 9, 11, 14, 21, 32, 54" style="width: 250px"/>
+        </div>
+        <div class="input">
+            <label for="tb-first">Number: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="findIndex()" value="Find index" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

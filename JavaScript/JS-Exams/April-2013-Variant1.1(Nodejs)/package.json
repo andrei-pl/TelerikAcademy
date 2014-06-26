@@ -1,0 +1,10 @@
+﻿{
+  "name": "April_2013_Variant1.1_Nodejs_",
+  "version": "0.0.0",
+  "description": "April-2013-Variant1.1(Nodejs)",
+  "main": "app.js",
+  "author": {
+    "name": "Андрей",
+    "email": ""
+  }
+}

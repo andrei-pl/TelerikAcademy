@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Reverse string</title>
+    <script>
+        function reverseString() {
+            var text = document.getElementById("tb-first").value;
+            var newText = "";
+            var i;
+
+            for (i = text.length - 1; i >= 0; i--) {
+                newText += text[i];
+            }
+
+            document.getElementById("result").innerHTML = newText;
+        }
+    </script>
+</head>
+<body>
+    <!--
+      Write a JavaScript function reverses string and returns itExample: "sample"  "elpmas".
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">String: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="reverseString()" value="Reverse String" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

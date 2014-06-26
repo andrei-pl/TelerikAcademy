@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Numbers name</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Number: </label>
+            <input type="text" id="tb-first" />
+            <label id="result"></label>
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="numberName()">See the name</a>
+        </div>
+    </div>
+    <script>
+        function numberName() {
+            var number = parseInt(document.getElementById("tb-first").value);
+
+            if (isNaN(number)) {
+                document.getElementById("result").innerHTML = "not a number";
+            }
+            else {
+                var printStr = "The number is: ";
+                if (number >= 0 && number <= 999)
+                {
+                    if (number === 0) {
+                        printStr += "Zero";
+                    }
+                    else {
+                        switch (parseInt(number / 100))                //that we see if the number is more than 100
+                        {
+                            case 1:
+                                printStr += "One hundred ";
+                                break;
+                            case 2:
+                                printStr += "Two hundred ";
+                                break;
+                            case 3:
+                                printStr += "Three hundred ";
+                                break;
+                            case 4:
+                                printStr += "Four hundred ";
+                                break;
+                            case 5:
+                                printStr += "Five hundred ";
+                                break;
+                            case 6:
+                                printStr += "Six hundred ";
+                                break;
+                            case 7:
+                                printStr += "Seven hundred ";
+                                break;
+                            case 8:
+                                printStr += "Eight hundred ";
+                                break;
+                            case 9:
+                                printStr += "Nine hundred ";
+                                break;
+                        }
+
+                        if (number > 100 && (number % 100) > 0)  //if the number has values between 1 and 99 we add the word "and"
+                        {
+                            printStr += ("and ");
+                        }
+
+                        if (number % 100 >= 10 && (number % 100) < 20) //check that the number is between 10 and 19
+                        {
+                            switch (number % 100) {
+                                case 10:
+                                    printStr += "ten";
+                                    break;
+                                case 11:
+                                    printStr += "eleven";
+                                    break;
+                                case 12:
+                                    printStr += "twelve";
+                                    break;
+                                case 13:
+                                    printStr += "thirteen";
+                                    break;
+                                case 14:
+                                    printStr += "fourteen";
+                                    break;
+                                case 15:
+                                    printStr += "fifteen";
+                                    break;
+                                case 16:
+                                    printStr += "sixteen";
+                                    break;
+                                case 17:
+                                    printStr += "seventeen";
+                                    break;
+                                case 18:
+                                    printStr += "eighteen";
+                                    break;
+                                case 19:
+                                    printStr += "nineteen";
+                                    break;
+                            }
+                        }
+                        else                                   //write the numbers between 0 and 99
+                        {
+                            switch (parseInt((number % 100) / 10)) {
+                                case 2:
+                                    printStr += "twenty ";
+                                    break;
+                                case 3:
+                                    printStr += "thirty ";
+                                    break;
+                                case 4:
+                                    printStr += "fourty ";
+                                    break;
+                                case 5:
+                                    printStr += "fifty ";
+                                    break;
+                                case 6:
+                                    printStr += "sixty ";
+                                    break;
+                                case 7:
+                                    printStr += "seventy ";
+                                    break;
+                                case 8:
+                                    printStr += "eighty ";
+                                    break;
+                                case 9:
+                                    printStr += "ninety ";
+                                    break;
+                            }
+
+                            switch (number % 10) {
+                                case 1:
+                                    printStr += "one";
+                                    break;
+                                case 2:
+                                    printStr += "two";
+                                    break;
+                                case 3:
+                                    printStr += "three";
+                                    break;
+                                case 4:
+                                    printStr += "four";
+                                    break;
+                                case 5:
+                                    printStr += "five";
+                                    break;
+                                case 6:
+                                    printStr += "six";
+                                    break;
+                                case 7:
+                                    printStr += "seven";
+                                    break;
+                                case 8:
+                                    printStr += "eight";
+                                    break;
+                                case 9:
+                                    printStr += "nine";
+                                    break;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    printStr += "You entered wrong number.";
+                }
+            
+                document.getElementById("result").innerHTML = printStr; 
+                
+            }
+        }
+    </script>
+</body>
+</html>

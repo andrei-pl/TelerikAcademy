@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Odd or Even and Division</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Number: </label>
+            <input type="text" id="tb-first" />
+            <label id="result"></label>
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="isDividedby35()">Is divided by 5 and 7 at the ssame time</a>
+        </div>
+    </div>
+    <script>
+        function isDividedby35() {
+            var first = document.getElementById('tb-first').value;
+
+            if (first % 35 === 0) {
+                document.getElementById('result').innerHTML = "number " + first + " can be divided by 5 and 7 at the same time";
+            }
+            else {
+                document.getElementById('result').innerHTML = "number " + first + " can not be divided by 5 and 7 at the same time";
+            }
+        }
+    </script>
+</body>
+</html>

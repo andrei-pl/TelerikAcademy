@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Find word</title>
+    <script>
+        function findWord() {
+            var text = document.getElementById("tb-first").value;
+            var wordToSearch = document.getElementById("tb-second").value;
+
+            var result = countWords(text, wordToSearch);
+
+            document.getElementById("result").innerHTML = result + " times";
+        }
+        function countWords(text, word) {
+            var arr = text.split(" ");
+            var i;
+            var count = 0;
+
+            if (arr.length === 1 && arr[0] === '') {
+                return "Enter some text: 0";
+            }
+            if (word === '') {
+                return "Enter word for search: 0";
+            }
+
+            for (i = 0; i < arr.length; i++) {
+                if (word.toLowerCase() === arr[i].toLowerCase()) {
+                    count++;
+                }
+            }
+            return count;
+        }
+    </script>
+
+</head>
+<body>
+    <!--
+            Write a function that finds all the occurrences of word in a text
+            The search can case sensitive or case insensitive
+            Use function overloading
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Text: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Word to find: </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="findWord()" value="Find Occurences of word" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

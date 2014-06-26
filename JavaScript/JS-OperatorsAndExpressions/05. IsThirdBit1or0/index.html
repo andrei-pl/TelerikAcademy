@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Third bit</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Number: </label>
+            <input type="text" id="tb-first" />
+            <label id="result"></label>
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="findThirdBit()">Third bit is</a>
+        </div>
+    </div>
+    <script>
+        function findThirdBit() {
+            var number = document.getElementById("tb-first").value;
+
+            var result = number & 4;
+            var bit = result >> 2;
+
+            document.getElementById("result").innerHTML = "Third bit of number " + number.toString(2) + " is:" + bit;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Replace Non Breaking White Spaces</title>
+    <script>
+        function replaceWhiteSpace() {
+            var input = document.getElementById("tb-first").value;
+            var str = input.split(" ").join('&amp;nbsp;');
+
+            document.getElementById("result").innerHTML = str;
+        }
+    </script>
+</head>
+<body>
+    <!--
+         Write a function that replaces non breaking white-spaces in a text with &nbsp;
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter text: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="replaceWhiteSpace()" value="Replace" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+﻿{
+  "name": "Listy_Nodejs_",
+  "version": "0.0.0",
+  "description": "Listy(Nodejs)",
+  "main": "app.js",
+  "author": {
+    "name": "Андрей",
+    "email": ""
+  }
+}

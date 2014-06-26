@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Check brackets</title>
+    <script>
+        function checkBrackets() {
+            var expression = document.getElementById("tb-first").value;
+            var isValid = true;
+            var brackets = '';
+            var i;
+
+            for (i = 0; i < expression.length; i++) {
+
+                if (expression[i] === '(') {
+                    brackets += '(';
+                }
+
+                if (expression[i] === ')') {
+                    if (brackets.length > 0) {
+                        if (brackets[brackets.length - 1] === '(') {
+                            if (brackets.length === 1) {
+                                brackets = '';
+                            } else {
+                                brackets = brackets.substring(0, brackets.length - 1);
+                            }
+                        }
+                        else {
+                            isValid = false;
+                            break;
+                        }
+                    }
+                    else {
+                        isValid = false;
+                        break;
+                    }
+                }
+            }
+
+            if (brackets.length !== 0) {
+                isValid = false;
+            }
+
+            document.getElementById("result").innerHTML = isValid;
+        }
+    </script>
+
+</head>
+<body>
+    <!--
+          Write a JavaScript function to check if in a given expression the brackets are put correctly.
+          Example of correct expression: ((a+b)/5-d).
+          Example of incorrect expression: )(a+b)).
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter some expression: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="checkBrackets()" value="Check validity of expression" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

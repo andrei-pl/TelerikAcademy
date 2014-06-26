@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Is in area</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Side a: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Side b: </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div class="input">
+            <label for="tb-third">Height: </label>
+            <input type="text" id="tb-third" />
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="area()">Calculate Area</a>
+        </div>
+        <div>
+            <label id="result"></label>
+        </div>
+    </div>
+    <script>
+        function area() {
+            var A = parseInt(document.getElementById("tb-first").value);
+            var B = parseInt(document.getElementById("tb-second").value);
+            var H = parseInt(document.getElementById("tb-third").value);
+            var area = (A + B) * H / 2;
+
+            document.getElementById("result").innerHTML = "Trapezoid area is: " + area;
+        }
+    </script>
+</body>
+</html>

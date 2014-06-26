@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function solve(params) {
+            var leva = parseInt(params[0]);
+            var cake1 = parseInt(params[1]);
+            var cake2 = parseFloat(params[2]);
+            var cake3 = parseInt(params[3]);
+            var result = 0;
+            var temp = 0;
+
+            var cakes1Count = parseInt(leva / cake1);
+            var cakes2Count = parseInt(leva / cake2);
+            var cakes3count = parseInt(leva / cake3);
+
+            for (var cakes1Index = 0; cakes1Index <= cakes1Count; cakes1Index++) {
+                for (var cakes2Index = 0; cakes2Index <= cakes2Count; cakes2Index++) {
+                    for (var cakes3Index = 0; cakes3Index <= cakes3count; cakes3Index++) {
+                        temp = cakes1Index * cake1 + cakes2Index * cake2 + cakes3Index * cake3;
+
+                        if (temp <= leva && temp != 0) {
+                            if (result < temp) {
+                                result = temp;
+                            }
+                        }
+                        temp = 0;
+                    }
+                }
+            }
+            console.log(result);
+        }
+
+        var x = [
+           110,
+19,
+29,
+39
+
+
+
+        ];
+
+        function Solver() {
+            Solve(x);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="Solver()" value="Click me" />
+</body>
+</html>

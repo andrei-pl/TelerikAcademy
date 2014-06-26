@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+    <title>Design 2</title>
+</head>
+<body>
+    <header>
+        <h1><a href="http://www.linkedin.com/" id="#">LinkedIn</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                Home
+            </li>
+            <li>
+                What is LinkedIn?
+            </li>
+            <li>
+                Join Today
+            </li>
+            <li>
+                <form action="#" method="post" name="login" id="login">
+                    <fieldset>
+                        <legend>Sign In</legend>
+                        <ul>
+                            <li>
+                                <div>
+                                    <label for="email" id="signIn">E-mail: &nbsp; </label>
+                                    <input type="text" name="email" />
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label for="password">Password: &nbsp;</label>
+                                    <input type="password" name="password" id="password" />
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <input type="submit" value="Sign In" />
+                                </div>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </li>
+        </ul>
+    </nav>
+    <hr />
+    <section>
+        <h1>Over 175 million proffesionals use LinkedIn to exchange information, ideas and opportunities</h1>
+        <article>
+            <ul>
+                <li>
+                    Stay informed about your contacts and industry
+                </li>
+                <li>
+                    Find the people &amp; knownledge you need to achieve your goals
+                </li>
+                <li>
+                    Control your proffessional identity online
+                </li>
+            </ul>
+        </article>
+
+        <h3>Join LinkedIn Today</h3>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Sign Up</legend>
+                <ul>
+                    <li>
+                        <div><label for="firstname">First Name:</label></div>
+                        <div>
+                            <input type="text" name="firstname" id="firstname" />
+                        </div>
+                    </li>
+                    <li>
+                        <div><label for="lastname">Last Name:</label></div>
+                        <div>
+                            <input type="text" name="lastname" id="lastname" />
+                        </div>
+                    </li>
+                    <li>
+                        <div><label for="regemail">Email:</label></div>
+                        <div>
+                            <input type="text" name="regemail" id="regemail" />
+                        </div>
+                    </li>
+                    <li>
+                        <div><label for=regpassword>Password:</label></div>
+                        <div>
+                            <input type="password" name="regpassword" id="regpassword" />
+                        </div>
+                        <br />
+                        <div>6 or more characters</div>
+                    </li>
+                </ul>
+                <div><input type="submit" value="Join Now" /></div>
+                <br />
+                <div>Already on LinkedIn? <a href="#login">Sign In.</a></div>
+            </fieldset>
+        </form>
+    </section>
+    <footer>
+        <h4>Search for someone by name:</h4>
+        <form action="#" method="post">
+            <ul>
+                <li>
+                    <div>
+                        <label for="searchFirstName">First Name &nbsp; </label>
+                        <input type="text" name="searchFirstName" id="searchFirstName" />
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <label for="searchLastName">Last Name &nbsp;</label>
+                        <input type="text" name="searchLastName" id="searchLastName" />
+                    </div>
+                </li>
+            </ul>
+            <input type="submit" value="Go" />
+        </form>
+        <script language="javascript">
+            var inp = document.getElementById('regpassword');
+            for (var i = 0; i < inp.files.length; ++i) {
+                var name = inp.files.item(i).name;
+                alert("here is a file name: " + name);
+            }
+        </script>
+    </footer>
+</body>
+</html>

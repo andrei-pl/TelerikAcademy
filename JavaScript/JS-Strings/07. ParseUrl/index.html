@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>ExtractUrl</title>
+    <script>
+        var index = 0;
+
+        function extractInfo() {
+            var input = document.getElementById("tb-first").value;
+            var protocol = '';
+            var server = '';
+            var resourse = '';
+
+            index = 0;
+            protocol += inputInfo(protocol, input) + '//';
+            index = protocol.length;
+            server += inputInfo(server, input);
+            index += server.length;
+            resource = input.substring(index, input.length);
+
+            document.getElementById("protocol").innerHTML = '{protocol: ' + protocol;
+            document.getElementById("server").innerHTML = 'server: ' + server;
+            document.getElementById("resource").innerHTML = 'resource: ' + resource + '}';
+        }
+
+        function inputInfo(element, input) {
+            element += input.substring(index, input.indexOf('/', index));
+            return element;
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a script that parses an URL address given in the format:
+        [protocol]://[server]/[resource]
+
+        and extracts from it the [protocol], [server] and [resource] elements.
+        Return the elements in a JSON object.For example from the URL http://www.devbg.org/forum/index.php the following information should be extracted:
+        {protocol: "http",
+        server: "www.devbg.org",
+        resource: "/forum/index.php"}
+
+    -->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter url: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="extractInfo()" value="Extract info" />
+        </div>
+        <div id="protocol"></div>
+        <div id="server"></div>
+        <div id="resource"></div>
+    </div>
+</body>
+</html>

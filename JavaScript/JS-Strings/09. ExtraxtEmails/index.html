@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Extract emails</title>
+    <script>
+        function extractEmails() {
+            var input = document.getElementById("tb-first").value;
+
+            var match = input.match(/\w+@\w+\.\w+/g);  //using regex
+            var result = '';
+            var i;
+
+            if (match !== null) {
+                for (i = 0; i < match.length; i++) {
+                    result += match[i] + " ";
+                }
+            }
+
+            if (result.length !== 0) {
+                document.getElementById("result").innerHTML = result;
+            } else {
+                document.getElementById("result").innerHTML = "There are not valid email addresses";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a function for extracting all email addresses from given text. 
+        All substrings that match the format <identifier>@<host>…<domain> should be recognized as emails. 
+        Return the emails as array of strings.
+    -->
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter url: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="extractEmails()" value="Extract emails" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

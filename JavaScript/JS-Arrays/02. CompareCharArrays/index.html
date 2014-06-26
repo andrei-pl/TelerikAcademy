@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Compare char arrays</title>
+    <script>
+        function compareCharArrays() {
+            var first = document.getElementById("tb-first").value;
+            var second = document.getElementById("tb-second").value;
+            var FirstRow = first.split('');
+            var SecondRow = second.split('');
+            var IsEqual = true;
+            var i;
+            for (i = 0; i < Math.max(FirstRow.length, SecondRow.length) ; i++) {
+                if (FirstRow.length <= i) {
+                    document.getElementById("result").innerHTML = "First string is lexicographically smaller";
+                    IsEqual = false;
+                    break;
+                }
+                else if (SecondRow.length <= i) {
+                    document.getElementById("result").innerHTML = "Second string is lexicographically smaller";
+                    IsEqual = false;
+                    break;
+                }
+                else if (FirstRow[i] < SecondRow[i]) {
+                    document.getElementById("result").innerHTML = "First string is lexicographically smaller";
+                    IsEqual = false;
+                    break;
+                }
+                else if (FirstRow[i] > SecondRow[i]) {
+                    document.getElementById("result").innerHTML = "Second string is lexicographically smaller";
+                    IsEqual = false;
+                    break;
+                }
+                else
+                    IsEqual = true;
+            }
+            if (IsEqual == true) {
+                document.getElementById("result").innerHTML = "Two strings are lexicographically equal";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--Write a script that compares two char arrays lexicographically (letter by letter).-->
+
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">First string: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Second string: </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="compareCharArrays()" value="Compare" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

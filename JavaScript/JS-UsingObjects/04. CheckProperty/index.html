@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Check property</title>
+    <script>
+        function checkProperty() {
+            var propName = document.getElementById("tb-first").value;
+            var pesho = {
+                name: "Pesho",
+                age: 23
+            }
+
+            if (isPropertyExist(pesho, propName) === true) {
+                document.getElementById("result").innerHTML = "Property exists!";
+            } else {
+                document.getElementById("result").innerHTML = "Property does NOT exists!";
+            }
+        }
+
+        function isPropertyExist(obj, propName) {
+            for (var prop in obj) {
+                if (prop === propName) {
+                    return true;
+                }
+            }
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <!--
+        Write a function that checks if a given object contains a given property
+
+        var obj  = …;
+        var hasProp = hasProperty(obj,"length");
+    -->
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">Enter some property name for search (Hint: name): </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div id="inputbutton">
+            <input type="button" onclick="checkProperty()" value="Check property" />
+        </div>
+        <div id="result"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function solve(x){
+            function s(N){n=Number(N);return n<2?.5:(4*n-2)/(n+1)*c(n-1)}
+            function c(n){return n<2?.5:2*(2*(n)-1)/(n+1)*c(n-1)}
+            //function(a){function f(n){return n<2?.5:n*f(n-1)};return f(2*a)/(f(a)*f(a+1))}
+            console.log(c(x));
+        }
+        var x = 10;
+
+        function Solver() {
+            solve(x);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" onclick="Solver()" value="Click me" />
+</body>
+</html>

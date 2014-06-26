@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Greatest number</title>
+</head>
+<body>
+    <div id="inputdiv">
+        <div class="input">
+            <label for="tb-first">First number: </label>
+            <input type="text" id="tb-first" />
+        </div>
+        <div class="input">
+            <label for="tb-second">Second number: </label>
+            <input type="text" id="tb-second" />
+        </div>
+        <div class="input">
+            <label for="tb-third">Third number: </label>
+            <input type="text" id="tb-third" />
+        </div>
+        <div class="input">
+            <label for="tb-fourth">Third number: </label>
+            <input type="text" id="tb-fourth" />
+        </div>
+        <div class="input">
+            <label for="tb-fifth">Third number: </label>
+            <input type="text" id="tb-fifth" />
+        </div>
+        <div id="inputbutton">
+            <a href="#" onclick="findBiggest()">Find biggest</a>
+        </div>
+        <div>
+            <span id="result"></span>
+        </div>
+    </div>
+    <script>
+        function findBiggest() {
+            var first = parseInt(document.getElementById("tb-first").value);
+            var second = parseInt(document.getElementById("tb-second").value);
+            var third = parseInt(document.getElementById("tb-third").value);
+            var fourth = parseInt(document.getElementById("tb-fourth").value);
+            var fifth = parseInt(document.getElementById("tb-fifth").value);
+            var arr = [first, second, third, fourth, fifth];
+
+            var theBiggest = arr[0];
+
+            if (isNaN(arr[0]) || isNaN(arr[1]) || isNaN(arr[2]) || isNaN(arr[3]) || isNaN(arr[4])) {
+                document.getElementById("result").innerHTML = "all must be numbers";
+            }
+            else {
+                for (i = 1; i < arr.length; i++) {
+                    if (theBiggest < arr[i]) {
+                        theBiggest = arr[i];
+                    }
+                }
+                document.getElementById("result").innerHTML = "Greatest number is: " + theBiggest;
+            }
+        }
+    </script>
+</body>
+</html>
