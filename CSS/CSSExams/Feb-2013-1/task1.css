@@ -1,0 +1,74 @@
+﻿body {
+    background-color: #FFF;
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    padding: 0;
+    font-size: 16px;
+}
+
+aside {
+    padding: 0 15px;
+}
+
+li {
+    position: relative;
+    line-height: 1.65em;
+}
+
+    li:not(:last-child) {
+        border-bottom: 1px solid #9D00FF;
+    }
+
+aside > ul {
+    width: 185px;
+    padding: 5px 15px;
+    background: #d19bff; /* Old browsers */
+    background: -moz-linear-gradient(top, #d19bff 0%, #8a77ff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d19bff), color-stop(100%,#8a77ff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #d19bff 0%,#8a77ff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #d19bff 0%,#8a77ff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #d19bff 0%,#8a77ff 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #d19bff 0%,#8a77ff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d19bff', endColorstr='#8a77ff',GradientType=0 ); /* IE6-9 */
+    font-size: 1.4em;
+}
+
+#sidebar, ul {
+    position: absolute;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-radius: 10px;
+}
+
+aside ul li ul {
+    display: none;
+    width: 210px;
+    padding: 5px 5px 5px 20px;
+    background-color: #B5AAFF;
+    font-size: 0.8em;
+    background-image: url(imgs/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 5px 15px;
+}
+
+aside ul li:hover ul {
+    display: block;
+    left: 190px;
+    top: 0;
+    margin-top: -5px;
+}
+
+aside ul li ul li {
+    line-height: 1.8em;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+li:hover {
+    border: 1px solid #9D00FF;
+    border-radius: 5px;
+}

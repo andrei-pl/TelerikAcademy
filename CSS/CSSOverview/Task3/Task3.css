@@ -1,0 +1,57 @@
+﻿body {
+    background-color: #AAA;
+    font-size: 10px;
+}
+
+h1 {
+    color: #FFD;
+}
+
+body header h1 {
+    font-size: 5em;
+    text-align: center;
+}
+
+section header h1 {
+    font-size: 3em;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul {
+    font-size: 2.4em;
+    font-weight: bold;
+    text-align: center;
+    list-style-type: none;
+}
+
+    ul li a {
+        color: #FFF;
+    }
+
+        ul li a:hover {
+            text-decoration: underline;
+            text-decoration-color: #FFF;
+        }
+
+        ul li a:active, ul li a:visited, ul li a:focus {
+            background-color: #CCC;
+            text-decoration: none;
+        }
+
+article > p {
+    font-size: 1.8em;
+}
+
+article footer p {
+    font-size: 1.4em;
+}
+
+body > footer {
+    font-size: 1.8em;
+    text-align: center;
+}

@@ -1,0 +1,64 @@
+﻿html, body, div, h1, ul, li, a, img, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+    color: #000;
+
+
+    #wrapper {
+        width: 960px;
+
+        .select-list {
+            margin-top: 25px;
+            margin-left: 25px;
+
+            ul {
+                width: 150px;
+                height: 200px;
+                overflow-y: scroll;
+                background: #8168ff; /* Old browsers */
+                background: -moz-linear-gradient(top, #8168ff 0%, #ffffff 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#8168ff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, #8168ff 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, #8168ff 0%,#ffffff 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, #8168ff 0%,#ffffff 100%); /* IE10+ */
+                background: linear-gradient(to bottom, #8168ff 0%,#ffffff 100%); /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8168ff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+                list-style-type: none;
+                border-top-left-radius: 5px;
+                 
+                li{
+                    padding: 5px 60px 5px 15px;
+                    border-bottom: 1px solid #000;
+                }
+
+                & li.selected{
+                    background-color: #6C4EFF;
+                }
+
+                & li:first-letter{
+                    text-decoration: underline;
+                }
+            }
+             
+            & > ul:first-child{
+            }
+
+            ul, .btn-unselect, .btn-select {
+                display: inline-block;
+                position:relative;
+            }
+
+            .btn-unselect img, .btn-select img {
+                width: 30px;
+                height:30px;
+                margin-bottom: 180px;
+                vertical-align: middle;
+            }
+        }
+    }
+}

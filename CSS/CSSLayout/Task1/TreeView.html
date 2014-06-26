@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>List tree</title>
+    <style>
+
+        #main-menu{
+            position:absolute;
+            margin:0;
+            padding:0;
+        }
+
+        #main-menu li ul{
+            display: none;
+        }
+
+        #main-menu li:hover ul{
+            display: block;
+            position: relative;
+            left: -35px;
+        }
+
+        ul{
+            list-style-type:none;
+        }
+
+        ul li a{
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration:underline;
+        }
+        #main-menu > li a {
+            color: #000;
+        }
+        #main-menu ul li a {
+            color: #808080;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul id="main-menu">
+            <li>
+                <a href="#">List item</a>
+                <ul>
+                    <li><a href="#">Sublist item</a></li>
+                    <li><a href="#">Sublist item</a></li>
+                    <li><a href="#">Sublist item</a></li>
+                    <li><a href="#">Sublist item</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">List item</a>
+                <ul>
+                    <li><a href="#">Sublist item</a></li>
+                    <li><a href="#">Sublist item</a></li>
+                    <li><a href="#">Sublist item</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">List item</a>
+                <ul>
+                    <li><a href="#">Sublist item</a></li>
+                    <li><a href="#">Sublist item</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">List item</a>
+                <ul>
+                    <li><a href="#">Sublist item</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

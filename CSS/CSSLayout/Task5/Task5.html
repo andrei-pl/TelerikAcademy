@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Products</title>
+    <style>
+        body {
+            font-family: Georgia, Verdana, sans-serif;
+            font-size: 22px;
+        }
+
+        #container {
+            width: 1000px;
+            margin-right: auto;
+            margin-left: auto;
+            overflow: hidden;
+        }
+
+        header div {
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 10px;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 7px;
+        }
+
+        nav a {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2DB7F1;
+        }
+
+        hr{
+            width: 95%;
+            margin:auto;
+            color:#000;
+            background-color:#000;
+            border-color:#000;
+        }
+
+        #products {
+            width: 650px;
+            display: inline-block;
+            /* IE 7 hack */
+            *zoom: 1;
+            *display: inline;
+            vertical-align: middle;
+            border: 2px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            padding-bottom: 14px;
+        }
+
+        .product {
+            float: left;
+            border: 2px solid black;
+            width: 300px;
+            margin-top: 20px;
+            margin-left: 14px;
+        }
+
+            .product h3 {
+                margin-top: -14px;
+                margin-left: 35px;
+                width: 230px;
+                text-align: center;
+                background-color: #FFFFFF;
+                font-weight: normal;
+                font-size: 24px;
+            }
+
+            .product img {
+                width: 160px;
+                margin-left: 4px;
+                margin-right: 0px;
+            }
+
+            .product .price {
+                float: left;
+                margin-left: 40px;
+                margin-top: 20px;
+            }
+
+        ul.specifications {
+            float: right;
+            padding: 0px;
+            list-style-type: none;
+            margin-top: 30px;
+            margin-right: 8px;
+        }
+
+            ul.specifications li:not(:first-child) {
+                margin-top: 20px;
+            }
+
+        #filter {
+            width: 330px;
+            display: inline-block;
+            /* IE 7 hack */
+            *zoom: 1;
+            *display: inline;
+            vertical-align: middle;
+        }
+
+        #filterForm {
+            margin-left: 20px;
+            margin-right: 10px;
+            font-size: 26px;
+        }
+
+            #filterForm fieldset {
+                position: relative;
+                margin-bottom: 5px;
+                border: 0px;
+            }
+
+            #filterForm legend span {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            #filterForm output {
+                position: absolute;
+                top: 0;
+                left: 160px;
+            }
+
+            #filterForm input[type="range"] {
+                margin-top: 50px;
+                width: 200px;
+            }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <header>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Apple</a></li>
+                        <li><a href="#">Toshiba</a></li>
+                        <li><a href="#">Lenovo</a></li>
+                        <li><a href="#">Dell</a></li>
+                        <li><a href="#">Asus</a></li>
+                        <li><a href="#">Acer</a></li>
+                        <li><a href="#">HP</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <hr />
+        <div id="content">
+            <section id="products">
+                <article class="product">
+                    <h3>Apple MacBook Air</h3>
+
+                    <img src="images/macbook.jpg" alt="product" />
+
+                    <ul class="specifications">
+                        <li>64 GB SSD</li>
+                        <li>2 GB DDR</li>
+                        <li>Intel Core i5</li>
+                    </ul>
+
+                    <span class="price">1300 USD</span>
+                </article>
+                <article class="product">
+                    <h3>Apple MacBook Air</h3>
+
+                    <img src="images/macbook.jpg" alt="product" />
+
+                    <ul class="specifications">
+                        <li>64 GB SSD</li>
+                        <li>2 GB DDR</li>
+                        <li>Intel Core i5</li>
+                    </ul>
+
+                    <span class="price">1300 USD</span>
+                </article>
+                <article class="product">
+                    <h3>Apple MacBook Air</h3>
+
+                    <img src="images/macbook.jpg" alt="product" />
+
+                    <ul class="specifications">
+                        <li>64 GB SSD</li>
+                        <li>2 GB DDR</li>
+                        <li>Intel Core i5</li>
+                    </ul>
+
+                    <span class="price">1300 USD</span>
+                </article>
+                <article class="product">
+                    <h3>Apple MacBook Air</h3>
+
+                    <img src="images/macbook.jpg" alt="product" />
+
+                    <ul class="specifications">
+                        <li>64 GB SSD</li>
+                        <li>2 GB DDR</li>
+                        <li>Intel Core i5</li>
+                    </ul>
+
+                    <span class="price">1300 USD</span>
+                </article>
+                <article class="product">
+                    <h3>Apple MacBook Air</h3>
+
+                    <img src="images/macbook.jpg" alt="product" />
+
+                    <ul class="specifications">
+                        <li>64 GB SSD</li>
+                        <li>2 GB DDR</li>
+                        <li>Intel Core i5</li>
+                    </ul>
+
+                    <span class="price">1300 USD</span>
+                </article>
+                <article class="product">
+                    <h3>Apple MacBook Air</h3>
+
+                    <img src="images/macbook.jpg" alt="product" />
+
+                    <ul class="specifications">
+                        <li>64 GB SSD</li>
+                        <li>2 GB DDR</li>
+                        <li>Intel Core i5</li>
+                    </ul>
+
+                    <span class="price">1300 USD</span>
+                </article>
+            </section>
+
+            <div id="filter">
+                <aside>
+                    <form id="filterForm" name="filterForm" method="get" action="#">
+                        <fieldset>
+                            <legend><span>Min price:</span></legend>
+                            <input type="range" name="minPriceFilter" min="50" max="1000" step="50" value="500"
+                                   oninput="minPrice.value = this.value + ' USD'" />
+                            <output name="minPrice">500 USD</output>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><span>Max price:</span></legend>
+                            <input type="range" name="maxPriceFilter" min="50" max="3000" step="50" value="1500"
+                                   oninput="maxPrice.value = this.value + ' USD'" />
+                            <output name="maxPrice">1500 USD</output>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><span>Min RAM:</span></legend>
+                            <input type="range" name="minRamFilter" min="0" max="8" step="1" value="4"
+                                   oninput="minRam.value = this.value + ' GB'" />
+                            <output name="minRam">4 GB</output>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend><span>Max RAM:</span></legend>
+                            <input type="range" name="maxRamFilter" min="1" max="32" step="1" value="16"
+                                   oninput="maxRam.value = this.value + ' GB'" />
+                            <output name="maxRam">16 GB</output>
+                        </fieldset>
+                    </form>
+                </aside>
+            </div>
+
+        </div>
+    </section>
+</body>
+</html>

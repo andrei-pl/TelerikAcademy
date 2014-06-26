@@ -1,0 +1,92 @@
+html,
+body,
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+    body #wrapper {
+        width: 960px;
+        margin-top: 5px;
+        margin-left: 5px;
+    }
+
+        body #wrapper .menu {
+            display: inline-block;
+        }
+
+            body #wrapper .menu li {
+                display: inline-block;
+                width: 180px;
+                height: 180px;
+                border: 20px solid #808080;
+                position: relative;
+                background: #727272;
+                /* Old browsers */
+                background: -moz-linear-gradient(top, #727272 0%, #ffffff 100%);
+                /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #727272), color-stop(100%, #ffffff));
+                /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, #727272 0%, #ffffff 100%);
+                /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, #727272 0%, #ffffff 100%);
+                /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, #727272 0%, #ffffff 100%);
+                /* IE10+ */
+                background: linear-gradient(to bottom, #727272 0%, #ffffff 100%);
+                /* W3C */
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#727272', endColorstr='#ffffff', GradientType=0);
+                /* IE6-9 */
+                text-align: center;
+            }
+
+                body #wrapper .menu li img {
+                    display: inline-block;
+                    width: 120px;
+                    height: 100px;
+                    border: 0;
+                    border-radius: 20px;
+                }
+
+                body #wrapper .menu li h3 {
+                    color: #FFF;
+                    font-weight: bold;
+                    padding: 5px 0;
+                }
+
+                body #wrapper .menu li .subtitle {
+                    color: #000;
+                    padding-top: 10px;
+                }
+
+                body #wrapper .menu li .click-here {
+                    display: none;
+                }
+
+                body #wrapper .menu li:hover {
+                    border: 20px solid #454545;
+                    background: #808080;
+                }
+
+                    body #wrapper .menu li:hover img {
+                        width: 140px;
+                        height: 110px;
+                    }
+
+                    body #wrapper .menu li:hover .subtitle {
+                        display: none;
+                    }
+
+                    body #wrapper .menu li:hover .click-here {
+                        display: block;
+                        color: #FFF;
+                        margin: 0;
+                        padding: 0;
+                        text-transform: uppercase;
+                    }

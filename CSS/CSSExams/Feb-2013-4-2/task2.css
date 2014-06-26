@@ -1,0 +1,75 @@
+﻿html, body, div, h1, img, p, ul, li, a, span {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, 'DejaVu Sans', 'Liberation Sans', Freesans, sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+    body #wrapper {
+        width: 960px;
+    }
+
+        body #wrapper > div {
+            display: inline-block;
+            margin-top: 15px;
+            margin-left: 15px;
+            background-color: #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            position: relative;
+            zoom: 1;
+        }
+
+            body #wrapper > div:after {
+                display: block;
+                content: "";
+                height: 0;
+                clear: both;
+            }
+
+            body #wrapper > div div {
+                border-radius: 5px;
+            }
+
+.holder {
+    float: left;
+    width: 550px;
+    margin-right: 15px;
+}
+
+    .holder img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+ul {
+    list-style-type: none;
+}
+
+body #wrapper > div div.playlist ul li {
+    display: block;
+    border-bottom: 1px solid black;
+    margin-left: 560px;
+    width: 120px;
+    text-align: center;
+    padding: 5px 0;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+body #wrapper > div div.playlist ul li a img {
+  display: block;
+  border-radius: 10px;
+  margin: 0 auto;
+}

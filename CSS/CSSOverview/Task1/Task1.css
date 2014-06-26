@@ -1,0 +1,45 @@
+﻿body {
+    background-color: #595959;
+    font-family: Arial;
+    color: #acb1aa;
+}
+
+a {
+    color: #f3f6ac;
+    text-decoration: none;
+}
+
+thead {
+    font-size: 21px;
+}
+
+tbody td {
+    padding: 5px;
+    font-size: 14px;
+}
+
+tbody tr td:first-child {
+    font-style: italic;
+    color: #fff;
+}
+
+tbody tr td:last-child {
+    padding-left: 25px;
+    color: #ccc;
+}
+
+tbody tr:last-child td:last-of-type {
+    color: orange;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 2px;
+    height: 2px;
+    background-color: #71b47a;
+}
+
+.alert {
+    color: red;
+    font-weight: bold;
+}
