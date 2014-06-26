@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        svg {
+            background-color: #F5FFE2;
+        }
+
+        text{
+            fill: #EDECEB;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        var svgNS = 'http://www.w3.org/2000/svg';
+        var svg = document.createElementNS(svgNS, 'svg');
+        svg.setAttribute('width', '400');
+        svg.setAttribute('height', '580');
+        document.body.appendChild(svg);
+
+        drawPath('#353530', 'none', 'M50 100 L50 130 L58 130 L58 110 L66 130 L74 110 L74 130 L82 130 L82 100 L72 100 L66 114 L60 100 z', 1, 1);
+        drawPath('#000000', 'none', 'M52 210 L52 240 L80 240 L80 232 L60 232 L60 229 L80 229 L80 221 L60 221 L60 218 L80 218 L80 210 z', 1, 1);
+        drawPath('#E33438', 'none', 'M62 320 L52 350 L60 350 L63 347 L69 347 L72 350 L80 350 L70 320 z', 1, 1);
+        drawPath('#F5FFE2', 'none', 'M64 339 L68 339 L66 332 z', 1, 1);
+        drawPath('#8FC650', 'none', 'M52 430 L52 460 L60 460 L72 445 L72 460 L80 460 L80 430 L72 430 L60 445 L60 430 z', 1, 1);
+        drawCircle('#353530', 220, 130, 100);
+        drawPath('#8FC650', 'none', 'M220 70 Q150 130 220 190 z', 1, 1);
+        drawPath('#53A348', 'none', 'M220 70 Q290 130 220 190 z', 1, 1);
+        drawCircle('#000000', 220, 230, 100);
+        writeTextOnThePage(135, 230, 45, '#EDECEB', 'express', 'Arial');
+        drawCircle('#E33438', 220, 330, 100);
+        drawPath('transparent', '#B3B3B3', 'M180 340 L175 285 L220 270 L270 285 L260 340', 3, 1);
+        drawPath('transparent', '#F1F0F0', 'M200 340 L220 290 L240 340', 9, 1);
+        drawPath('#B63032', 'none', 'M220 272 L220 330 L258 340 L268 286 z', 1, 0.5);
+        drawCircle('#8FC650', 220, 430, 100);
+
+        function drawPath(fillColor, strokeColor, d, strokeWidth, opacity) {
+            var leftCurve = document.createElementNS(svgNS, 'path');
+            leftCurve.setAttribute('d', d);
+            leftCurve.setAttribute('fill', fillColor);
+            leftCurve.setAttribute('stroke', strokeColor);
+            leftCurve.setAttribute('stroke-width', strokeWidth);
+            leftCurve.setAttribute('fill-opacity', opacity);
+            svg.appendChild(leftCurve);
+        }
+
+        function drawCircle(fillColor, cx, cy, r) {
+            var circle = document.createElementNS(svgNS, 'circle');
+            circle.setAttribute('fill', fillColor);
+            circle.setAttribute('stroke', 'none');
+            circle.setAttribute('cx', cx);
+            circle.setAttribute('cy', cy);
+            circle.setAttribute('r', r);
+            svg.appendChild(circle);
+        }
+
+
+        function writeTextOnThePage(x, y, fontSize, color, innerText, fontFamily) {
+            var text = document.createElementNS(svgNS, 'text');
+            text.setAttribute('x', x);
+            text.setAttribute('y', y);
+            text.setAttribute('font-size', fontSize + 'px');
+            text.setAttribute('fill', color);
+            text.setAttribute('font-family', fontFamily),
+            text.setAttribute('letter-spacing', '2px'),
+            text.innerHTML = innerText;
+            svg.appendChild(text);
+        }
+    </script>
+</body>
+</html>

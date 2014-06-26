@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. MEAN", "1. MEAN\1. MEAN.csproj", "{362930B6-A83B-4B9A-A84C-A404B50D59DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2. Win8Desktop", "2. Win8Desktop\2. Win8Desktop.csproj", "{6C4BB7B9-739A-4CFD-94A0-8D638B8412CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. MEAN-JS", "3. MEAN-JS\3. MEAN-JS.csproj", "{0639329E-DAC2-4B60-B8EE-E47D5968370C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{362930B6-A83B-4B9A-A84C-A404B50D59DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{362930B6-A83B-4B9A-A84C-A404B50D59DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{362930B6-A83B-4B9A-A84C-A404B50D59DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{362930B6-A83B-4B9A-A84C-A404B50D59DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C4BB7B9-739A-4CFD-94A0-8D638B8412CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C4BB7B9-739A-4CFD-94A0-8D638B8412CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C4BB7B9-739A-4CFD-94A0-8D638B8412CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C4BB7B9-739A-4CFD-94A0-8D638B8412CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0639329E-DAC2-4B60-B8EE-E47D5968370C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0639329E-DAC2-4B60-B8EE-E47D5968370C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0639329E-DAC2-4B60-B8EE-E47D5968370C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0639329E-DAC2-4B60-B8EE-E47D5968370C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

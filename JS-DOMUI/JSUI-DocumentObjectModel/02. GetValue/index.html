@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Get Value From Text Field</title>
+</head>
+<body>
+    <!--Create a function that gets the value of <input type="text"> ands prints its value to the console-->
+
+    <!--I know, it's boring :) -->
+
+    <input type="text" id="getText" placeholder="Type some text here" />
+    <button>Get text</button>
+    <div id="result"></div>
+    <script>
+        var btns = document.getElementsByTagName("button"),
+            btn1 = btns[0];
+
+        btn1.onclick = function () {
+            var text = document.getElementById('getText').value;
+            
+            console.log(text);
+            return document.getElementById('result').innerHTML = text;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+   <style>
+       table {
+    border-collapse: collapse;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+}
+
+th {
+    background-color: #A6A6A6;
+    color: white;
+}
+
+td {
+    padding: 3px;
+}
+
+td.course-number {
+    text-align: center;
+}
+
+tr:nth-child(odd) {
+    background-color: #D9D9D9;
+}
+   </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    <script src="bower_components/handlebars/handlebars.js"></script>
+    <script type="text/x-handlebars-template" id="post-template">
+        <table id="courses-information">
+            <tr>
+                <th>№</th>
+                <th>Title</th>
+                <th>Date #1</th>
+                <th>Date #2</th>
+            </tr>
+
+            {{#each courses}}
+            <tr class="course-info">
+                <td class="course-number">{{number}}</td>
+                <td class="course-title">{{title}}</td>
+                <td class="course-first-date">{{firstDate}}</td>
+                <td class="course-second-date">{{secondDate}}</td>
+            </tr>
+            {{/each}}
+        </table>
+    </script>
+
+    <script src="scripts/table.js"></script>
+</body>
+</html>

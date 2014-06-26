@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sets Background of the body</title>
+</head>
+<body>
+    <!--Crеate a function that gets the value of <input type="color"> and sets the background of the body to this value-->
+
+    <input type="color" id="getColor" placeholder="Type some text here" />
+    <button>Set background color</button>
+    <script>
+        var btns = document.getElementsByTagName("button"),
+            btn1 = btns[0];
+
+        btn1.onclick = function () {
+            var color = document.getElementById('getColor').value;
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

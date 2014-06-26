@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title> Flying ball</title>
+</head>
+<body>
+    <canvas id="the-canvas" width="1000" height="600" style="border: 2px solid black"></canvas>
+    <script>
+        var canvas = document.getElementById('the-canvas'),
+        ctx = canvas.getContext('2d'),
+        x = 10,
+        y = 10,
+        direction = 'dr';
+
+        ctx.strokeStyle = '#000000';
+        ctx.fillStyle = 'FFFFFF';
+        ctx.lineWidth = 2;
+
+        function play() {
+            ctx.beginPath();
+            ctx.arc(y, x, 10, 0, 2 * Math.PI);
+            ctx.fill();
+            ctx.stroke();
+            ctx.closePath();
+            move();
+            requestAnimationFrame(play);
+        }
+
+        function move() {
+            if (x >= canvas.height - 10) {
+                if (direction == 'dr') {
+                    direction = 'ur';
+                } else {
+                    direction = 'ul';
+                }
+            }
+            else if (y >= canvas.width - 10) {
+                if (direction == 'ur') {
+                    direction = 'ul';
+                } else {
+                    direction = 'dl';
+                }
+            }
+            else if (x <= 10) {
+                if (direction == 'ul') {
+                    direction = 'dl';
+                } else {
+                    direction = 'dr';
+                }
+            }
+            else if (y <= 10) {
+                if (direction == 'dl') {
+                    direction = 'dr';
+                } else {
+                    direction = 'ur';
+                }
+            }
+
+            if (direction == 'dr') {
+                x += 3;
+                y += 3;
+            }
+            else if (direction == 'ur') {
+                x -= 3;
+                y += 3;
+            }
+            else if (direction == 'ul') {
+                x -= 3;
+                y -= 3;
+            }
+            else {
+                x += 3;
+                y -= 3;
+            }
+        }
+        play();
+    </script>
+</body>
+</html>

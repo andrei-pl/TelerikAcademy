@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. Cooking", "01. Cooking\01. Cooking.csproj", "{1078E556-042A-4729-A61B-5E545830F4E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. IfStatement", "02. IfStatement\02. IfStatement.csproj", "{826303A5-55C3-4DF6-B0C0-DB7907F73F1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. ContainsValue", "03. ContainsValue\03. ContainsValue.csproj", "{5DE4EB25-42B2-4E35-BF93-1042F6259D0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1078E556-042A-4729-A61B-5E545830F4E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1078E556-042A-4729-A61B-5E545830F4E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1078E556-042A-4729-A61B-5E545830F4E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1078E556-042A-4729-A61B-5E545830F4E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{826303A5-55C3-4DF6-B0C0-DB7907F73F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{826303A5-55C3-4DF6-B0C0-DB7907F73F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{826303A5-55C3-4DF6-B0C0-DB7907F73F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{826303A5-55C3-4DF6-B0C0-DB7907F73F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DE4EB25-42B2-4E35-BF93-1042F6259D0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DE4EB25-42B2-4E35-BF93-1042F6259D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DE4EB25-42B2-4E35-BF93-1042F6259D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DE4EB25-42B2-4E35-BF93-1042F6259D0A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

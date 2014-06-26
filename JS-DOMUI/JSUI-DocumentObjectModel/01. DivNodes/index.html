@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Select All Nested Divs</title>
+</head>
+<body>
+    <!--Write a script that selects all the div nodes that are directly inside other div elements
+
+        Create a function using querySelectorAll()
+        Create a function using getElementsByTagName()-->
+
+    <button>Select with .getElementsByTagName</button>
+    <button>Select with QuerySelector</button>
+    <div>Lonely Div</div>
+    <div>
+        <div>Div inside another div 1</div>
+        <div>Div inside another div 2</div>
+    </div>
+    <div>Another lonely Div</div>
+    <div id="result"></div>
+    <script>
+        var btns = document.getElementsByTagName("button"),
+            btn1 = btns[0],
+            btn2 = btns[1];
+
+        btn1.onclick = function () {
+            var allDivs = document.getElementsByTagName('div');
+            var counter = 0;
+
+            for (var i = 0, len = allDivs.length; i < len; i += 1) {
+                var nestedDivs = allDivs[i].getElementsByTagName('div');
+
+                for (var j = 0, nestedLen = nestedDivs.length; j < nestedLen; j++) {
+                    counter++;
+                }
+            }
+            return document.getElementById('result').innerHTML = counter + ' nested Divs (using getElementsByTagName)';
+        };
+
+        btn2.onclick = function () {
+            var allNestedDivsQuery = document.querySelectorAll('div div')
+            var counter = 0;
+
+            for (var i = 0, len = allNestedDivsQuery.length; i < len; i += 1) {
+                counter++;
+            }
+
+            return document.getElementById('result').innerHTML = counter + ' nested Divs (using querySelectorAll)';
+        };
+    </script>
+</body>
+</html>

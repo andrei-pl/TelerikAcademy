@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. DivNodes", "01. DivNodes\01. DivNodes.csproj", "{61A6203A-D376-4CCE-AA06-606B0C7C37C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. GetValue", "02. GetValue\02. GetValue.csproj", "{D6298C03-2111-4D17-9AD8-7575FC77A466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.  SetBackgroundColor", "03.  SetBackgroundColor\03.  SetBackgroundColor.csproj", "{8097F8D8-D7F9-4308-B329-25CBF086FDFB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61A6203A-D376-4CCE-AA06-606B0C7C37C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A6203A-D376-4CCE-AA06-606B0C7C37C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A6203A-D376-4CCE-AA06-606B0C7C37C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A6203A-D376-4CCE-AA06-606B0C7C37C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6298C03-2111-4D17-9AD8-7575FC77A466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6298C03-2111-4D17-9AD8-7575FC77A466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6298C03-2111-4D17-9AD8-7575FC77A466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6298C03-2111-4D17-9AD8-7575FC77A466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8097F8D8-D7F9-4308-B329-25CBF086FDFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8097F8D8-D7F9-4308-B329-25CBF086FDFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8097F8D8-D7F9-4308-B329-25CBF086FDFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8097F8D8-D7F9-4308-B329-25CBF086FDFB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
