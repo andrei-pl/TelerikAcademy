@@ -8,5 +8,8 @@
     "bower_components",
     "test",
     "tests"
+  ],
+  "authors": [
+    "andrei-pl <andrey.pld@gmail.com>"
   ]
 }
