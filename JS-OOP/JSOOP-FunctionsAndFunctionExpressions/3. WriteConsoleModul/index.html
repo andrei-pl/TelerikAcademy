@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script src="scrits/script.js"></script>
+    <script>
+    specialConsole.writeLine("Message: hello");
+    //logs to the console "Message: hello"
+    specialConsole.writeLine("Message: {0}", "hello");
+    //logs to the console "Message: hello"
+    specialConsole.writeError("Error: {0}", "Something happened");
+    specialConsole.writeWarning("Warning: {0}", "A warning");
+    specialConsole.writeWarning("Warning: {0} {1}", "Anoter", "warning!");
+    specialConsole.writeError("{0} {1} {2}", "Error:", "Nothing", "embarrassing!");
+    specialConsole.writeLine("Message: {0} Byе{1}", "Good", "!");
+    </script>
+</body>
+</html>

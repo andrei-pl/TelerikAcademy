@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <button id="ellipse">Add moving ellipse</button>
+    <button id="rect">Add moving rectangle</button>
+    <div id="wrapper"></div>
+
+    <script src="scrits/script.js"></script>
+    <script>
+    var btnCir = document.getElementById('ellipse'),
+        btnRect = document.getElementById('rect');
+
+    function moveEllipse() {
+        movingShapes.add('ellipse');
+    }
+
+    function moveRect() {
+        movingShapes.add('rect');
+    }
+
+    btnCir.addEventListener('click', moveEllipse, false);
+    btnRect.addEventListener('click', moveRect, false);
+    </script>
+</body>
+</html>

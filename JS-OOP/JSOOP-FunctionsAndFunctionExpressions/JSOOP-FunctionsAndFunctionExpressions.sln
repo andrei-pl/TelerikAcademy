@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "1. DOMModule", "1. DOMModule\1. DOMModule.csproj", "{EEBD4E56-041C-4684-8B25-91CB55A72CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2.  MovingObjects", "2.  MovingObjects\2.  MovingObjects.csproj", "{2A6066A5-9505-4ACF-9CB7-98025ADB7AFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "3. WriteConsoleModul", "3. WriteConsoleModul\3. WriteConsoleModul.csproj", "{14363048-760F-4938-99C4-063AD0445DD8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EEBD4E56-041C-4684-8B25-91CB55A72CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBD4E56-041C-4684-8B25-91CB55A72CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBD4E56-041C-4684-8B25-91CB55A72CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBD4E56-041C-4684-8B25-91CB55A72CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A6066A5-9505-4ACF-9CB7-98025ADB7AFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6066A5-9505-4ACF-9CB7-98025ADB7AFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6066A5-9505-4ACF-9CB7-98025ADB7AFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6066A5-9505-4ACF-9CB7-98025ADB7AFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14363048-760F-4938-99C4-063AD0445DD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14363048-760F-4938-99C4-063AD0445DD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14363048-760F-4938-99C4-063AD0445DD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14363048-760F-4938-99C4-063AD0445DD8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

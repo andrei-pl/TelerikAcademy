@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Draw shapes</title>
+    <link href="styles/style.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="colors" class="info">
+            <label for="fillColor">Fill Color: </label>
+            <input type="color" id="fillColor" />
+            <label for="strokeColor">Stroke Color: </label>
+            <input type="color" id="strokeColor" />
+        </div>
+        <div id="circle">
+            <button class="circle">Create Circle</button>
+            <div class="info">
+                <span>
+                    <label for="circleX">Center: X</label>
+                    <input type="text" id="circleX" maxlength="3" />
+                </span>
+                <span>
+                    <label for="circleY">Y </label>
+                    <input type="text" id="circleY" maxlength="3" />
+                </span>
+                <span>
+                    <label for="circleR">Radius: </label>
+                    <input type="text" id="circleR" maxlength="3" />
+                </span>
+            </div>
+        </div>
+        <div id="rect">
+            <button class="rectangle">Create rectangle</button>
+            <div class="info">
+                <span>
+                    <label for="rectX">Left (X) </label>
+                    <input type="text" id="rectX" maxlength="3" />
+                </span>
+                <span>
+                    <label for="rectY">Top (Y)</label>
+                    <input type="text" id="rectY" maxlength="3" />
+                </span>
+                <span>
+                    <label for="rectW">Width </label>
+                    <input type="text" id="rectW" maxlength="3" />
+                </span>
+                <span>
+                    <label for="rectH">Height</label>
+                    <input type="text" id="rectH" maxlength="3" />
+                </span>
+            </div>
+        </div>
+        <div id="line">
+            <button class="line">Create Line</button>
+            <div class="info">
+                <span>
+                    <label for="lineFromX">From: X</label>
+                    <input type="text" id="lineFromX" maxlength="3" />
+                </span>
+                <span>
+                    <label for="lineFromY">Y </label>
+                    <input type="text" id="lineFromY" maxlength="3" />
+                </span>
+                <span>
+                    <label for="lineToX">To: X</label>
+                    <input type="text" id="lineToX" maxlength="3" />
+                </span>
+                <span>
+                    <label for="lineToY">Y </label>
+                    <input type="text" id="lineToY" maxlength="3" />
+                </span>
+            </div>
+        </div>
+        <canvas id="canvas" width="1000" height="600"></canvas>
+
+        <script src="scripts/script.js"></script>
+        <script>
+            var buttons = document.getElementsByTagName('button'),
+                fillInput = document.getElementById('fillColor'),
+                strokeInput = document.getElementById('strokeColor'),
+                fillColor = fillInput.value,
+                strokeColor = strokeInput.value,
+                canvas = document.getElementById('canvas'),
+                context = canvas.getContext('2d'),
+                shape = new Shape(context);
+
+            buttons[0].addEventListener('click', drawCircle, true);
+            buttons[1].addEventListener('click', drawRect, true);
+            buttons[2].addEventListener('click', drawLine, true);
+            fillInput.addEventListener('change', function () { changeColor(this, 'fill') }, true);
+            strokeInput.addEventListener('change', function () { changeColor(this, 'stroke') }, true);
+
+            function changeColor(selector, color) {
+                if (color === 'fill') {
+                    fillColor = selector.value;
+                }
+                else {
+                    strokeColor = selector.value;
+                }
+            }
+
+            function drawCircle() {
+                var centerX = Number(document.getElementById('circleX').value) || 0,
+                    centerY = Number(document.getElementById('circleY').value) || 0,
+                    radius = Number(document.getElementById('circleR').value) || 0;
+
+                shape.drawCircle(centerX, centerY, radius, fillColor, strokeColor);
+            }
+
+            function drawRect() {
+                var rectX = Number(document.getElementById('rectX').value) || 0,
+                    rectY = Number(document.getElementById('rectY').value) || 0,
+                    rectW = Number(document.getElementById('rectW').value) || 0,
+                    rectH = Number(document.getElementById('rectH').value) || 0;
+
+                shape.drawRect(rectX, rectY, rectW, rectH, fillColor, strokeColor);
+            }
+
+            function drawLine() {
+                var lineFromX = Number(document.getElementById('lineFromX').value) || 0,
+                    lineFromY = Number(document.getElementById('lineFromY').value) || 0,
+                    lineToX = Number(document.getElementById('lineToX').value) || 0,
+                    lineToY = Number(document.getElementById('lineToY').value) || 0;
+
+                shape.drawLine(lineFromX, lineFromY, lineToX, lineToY, fillColor, strokeColor);
+            }
+
+        </script>
+    </div>
+</body>
+</html>
