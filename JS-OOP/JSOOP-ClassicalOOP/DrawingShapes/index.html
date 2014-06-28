@@ -69,6 +69,10 @@
                     <label for="lineToY">Y </label>
                     <input type="text" id="lineToY" maxlength="3" />
                 </span>
+                <span>
+                    <label for="lineW">Width </label>
+                    <input type="text" id="lineW" maxlength="3" />
+                </span>
             </div>
         </div>
         <canvas id="canvas" width="1000" height="600"></canvas>
@@ -121,8 +125,9 @@
                     lineFromY = Number(document.getElementById('lineFromY').value) || 0,
                     lineToX = Number(document.getElementById('lineToX').value) || 0,
                     lineToY = Number(document.getElementById('lineToY').value) || 0;
+                    lineW = Number(document.getElementById('lineW').value) || 1;
 
-                shape.drawLine(lineFromX, lineFromY, lineToX, lineToY, fillColor, strokeColor);
+                shape.drawLine(lineFromX, lineFromY, lineToX, lineToY, fillColor, strokeColor, lineW);
             }
 
         </script>

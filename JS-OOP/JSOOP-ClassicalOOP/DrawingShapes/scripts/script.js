@@ -30,10 +30,11 @@
             context.closePath();
         },
 
-        drawLine: function (startX, startY, endX, endY, fillColor, strokeColor) {
+        drawLine: function (startX, startY, endX, endY, fillColor, strokeColor, lineWidth) {
             context.beginPath();
             context.moveTo(startX, startY);
             context.lineTo(endX, endY);
+            context.lineWidth = lineWidth;
             fillShape.call(this);
             context.closePath();
         }
