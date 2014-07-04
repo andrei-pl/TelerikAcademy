@@ -1,0 +1,19 @@
+﻿body{
+    background-color: lightgray;
+}
+
+canvas {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#scores {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+ol {
+    list-style: decimal;
+}
