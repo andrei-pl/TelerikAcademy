@@ -1,0 +1,24 @@
+﻿.combobox-control {
+    border: 1px solid black;
+    width: 120px;
+    text-align: center;
+}
+
+.person-item {
+    border: 3px solid blue;
+    display: none;
+    margin: 1px;
+    height: 100%;
+}
+
+    .person-item:hover {
+        border: 3px solid yellowgreen; 
+    }
+
+.visible, .selected {
+    display: block;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
