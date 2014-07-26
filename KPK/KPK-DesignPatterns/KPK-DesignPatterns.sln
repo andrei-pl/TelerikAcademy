@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StrategyPattern", "StrategyPattern\StrategyPattern.csproj", "{5351C91F-A11B-4A02-9E51-5B874A06C49E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FacadePattern", "FacadePattern\FacadePattern.csproj", "{99401DC3-BC80-4A64-8AFD-4ACACC45E722}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Singleton", "Singleton\Singleton.csproj", "{054ACCD8-D4FD-45B3-B7C1-566C9AEE6FE7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5351C91F-A11B-4A02-9E51-5B874A06C49E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5351C91F-A11B-4A02-9E51-5B874A06C49E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5351C91F-A11B-4A02-9E51-5B874A06C49E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5351C91F-A11B-4A02-9E51-5B874A06C49E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99401DC3-BC80-4A64-8AFD-4ACACC45E722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99401DC3-BC80-4A64-8AFD-4ACACC45E722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99401DC3-BC80-4A64-8AFD-4ACACC45E722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99401DC3-BC80-4A64-8AFD-4ACACC45E722}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054ACCD8-D4FD-45B3-B7C1-566C9AEE6FE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054ACCD8-D4FD-45B3-B7C1-566C9AEE6FE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054ACCD8-D4FD-45B3-B7C1-566C9AEE6FE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054ACCD8-D4FD-45B3-B7C1-566C9AEE6FE7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
