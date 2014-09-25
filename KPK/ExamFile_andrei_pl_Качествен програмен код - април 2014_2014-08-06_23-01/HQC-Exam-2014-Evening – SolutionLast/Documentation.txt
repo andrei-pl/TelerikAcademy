@@ -1,0 +1,37 @@
+ComputerWorld e startoviq fail
+
+Design pattern: Simple Factory
+
+	Pri sazdavane na Manufacturer, mislq che pokrai abstract Factory se pripokriva i tova
+
+Design pattern: Strategy
+	
+	Syzdavaneto na kompiutri i sarvari chrez IComputer
+
+Design pattern: Template Method
+	
+
+Design pattern: Abstract factory
+	Manufacturer - sazdavane na razlichnite modeli 
+
+Design pattern: Composite
+	 
+
+Design pattern: Mediator
+	 
+
+Found bottlenecks:
+	Vzimaneto na random chislo
+	Presmqtaneto na kvadrat na podadenoto chislo
+
+Found bugs:
+
+	this.data = new Dictionary<int, string> (capacity); - lipsvashe '>' (fail HardDriver)
+
+	this.capacity = capacity; - lipsvashe ';' v kraq na reda (fail HardDriver)
+
+	v class Computer ne beshe inicializirana  this.VideoCard = videoCard; v konstruktora
+
+
+
+Drugo ne sam gledal, moje i da sam spazil neshto drugo bez da sam se usetil. Priqtna proverka! :)

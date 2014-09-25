@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<directories>
+  <directory name="">
+    <file />
+    <name>_10.CreateAlbumsXMLWithXDocument.exe</name>
+    <type>.exe</type>
+    <file />
+    <name>_10.CreateAlbumsXMLWithXDocument.exe.config</name>
+    <type>.config</type>
+    <file />
+    <name>_10.CreateAlbumsXMLWithXDocument.pdb</name>
+    <type>.pdb</type>
+    <file />
+    <name>_10.CreateAlbumsXMLWithXDocument.vshost.exe</name>
+    <type>.exe</type>
+    <file />
+    <name>_10.CreateAlbumsXMLWithXDocument.vshost.exe.config</name>
+    <type>.config</type>
+    <file />
+    <name>_10.CreateAlbumsXMLWithXDocument.vshost.exe.manifest</name>
+    <type>.manifest</type>
+  </directory>
+</directories>

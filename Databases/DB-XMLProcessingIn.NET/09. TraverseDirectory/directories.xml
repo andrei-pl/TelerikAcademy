@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<directories>
+	<directory name="">
+		<file>
+			<name>_09.TraverseDirectory.exe</name>
+			<type>.exe</type>
+		</file>
+		<file>
+			<name>_09.TraverseDirectory.exe.config</name>
+			<type>.config</type>
+		</file>
+		<file>
+			<name>_09.TraverseDirectory.pdb</name>
+			<type>.pdb</type>
+		</file>
+		<file>
+			<name>_09.TraverseDirectory.vshost.exe</name>
+			<type>.exe</type>
+		</file>
+		<file>
+			<name>_09.TraverseDirectory.vshost.exe.config</name>
+			<type>.config</type>
+		</file>
+		<file>
+			<name>_09.TraverseDirectory.vshost.exe.manifest</name>
+			<type>.manifest</type>
+		</file>
+	</directory>
+</directories>

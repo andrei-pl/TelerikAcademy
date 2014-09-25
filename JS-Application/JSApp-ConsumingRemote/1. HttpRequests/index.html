@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HTTP Requests</title>
+
+    <link href="styles/style.css" rel="stylesheet" />
+    <script src="scripts/lib/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <!--
+        1. Create a module that exposes methods for performing HTTP requests by given URL and headers
+        getJSON and postJSON
+        Both methods should work with promises
+    -->
+    <header>
+        <h1>Students Managing System</h1>
+    </header>
+
+    <label for="lname">Enter  name:</label>
+    <input id="lname" type="text" />
+    <br />
+
+    <label for="grade">Enter grade:</label>
+    <input id="grade" type="number" />
+    <br />
+
+    <button id="add-btn">Add Student</button>
+    <br />
+    <!--
+        3. Using the REST API at 'localhost:3000/students' create a web application for managing students
+        The REST API provides methods as follows:
+        POST creates a new student
+        GET returns all students
+        DELETE deletes a student by Id
+        You may extend the demo for jQuery.ajax()
+    -->
+    <input id="student-id" type="number" placeholder="Enter student's id..." />
+    <button id="delete-btn">Delete Student</button>
+    <div>
+        <strong id="success"></strong>
+        <strong id="error"></strong>
+    </div>
+
+    <table id="students">
+        <tr>
+            <th>ID:</th>
+            <th>Name:</th>
+            <th>Grade</th>
+        </tr>
+    </table>
+    <script src="scripts/lib/requirejs/require.js" data-main="scripts/app"></script>
+</body>
+</html>
