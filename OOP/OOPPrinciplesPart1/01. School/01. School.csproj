@@ -43,13 +43,13 @@
   <ItemGroup>
     <Compile Include="IComments.cs" />
     <Compile Include="SchoolClass.cs" />
-    <Compile Include="Disciplines.cs" />
+    <Compile Include="Discipline.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="School.cs" />
-    <Compile Include="Students.cs" />
-    <Compile Include="Teachers.cs" />
+    <Compile Include="Student.cs" />
+    <Compile Include="Teacher.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

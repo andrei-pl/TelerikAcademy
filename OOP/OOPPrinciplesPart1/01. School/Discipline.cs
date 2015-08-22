@@ -5,7 +5,7 @@ using System.Text;
 
 namespace _01.School
 {
-    public class Disciplines : IComments
+    public class Discipline : IComments
     {
         public string DisciplineName { get; set; }
        
@@ -13,7 +13,7 @@ namespace _01.School
        
         public int NumberOfExercises { get; set; }
 
-        public Disciplines(string disciplineName, int numberOfLectures, int numberOfExercises)
+        public Discipline(string disciplineName, int numberOfLectures, int numberOfExercises)
         {
             DisciplineName = disciplineName;
             NumberOfLectures = numberOfLectures;

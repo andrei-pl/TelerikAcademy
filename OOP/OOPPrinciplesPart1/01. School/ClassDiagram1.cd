@@ -7,19 +7,19 @@
       <FileName>Person.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="_01.School.Teachers">
+  <Class Name="_01.School.Teacher">
     <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAIAA=</HashCode>
-      <FileName>Teachers.cs</FileName>
+      <FileName>Teacher.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="_01.School.Students">
+  <Class Name="_01.School.Student">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
-      <FileName>Students.cs</FileName>
+      <FileName>Student.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -38,11 +38,11 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="_01.School.Disciplines">
+  <Class Name="_01.School.Discipline">
     <Position X="2.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAAAJAAAAAAAACAAAAAAAAAAAAAAAAAIAA=</HashCode>
-      <FileName>Disciplines.cs</FileName>
+      <FileName>Discipline.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

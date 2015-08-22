@@ -1,7 +1,7 @@
-﻿using System.Text;
-
-namespace HW_CSharp
+﻿namespace HW_CSharp
 {
+    using System.Text;
+    
     static class Messages
     {
         static readonly StringBuilder output = new StringBuilder();

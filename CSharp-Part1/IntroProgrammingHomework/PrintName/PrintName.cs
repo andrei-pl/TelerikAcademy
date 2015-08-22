@@ -6,7 +6,7 @@ namespace PrintName
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Andrey");
+            Console.WriteLine("Pesho");
         }
     }
 }

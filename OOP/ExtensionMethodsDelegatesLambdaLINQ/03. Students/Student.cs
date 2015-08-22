@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _03.Students
 {
-    class Students
+    class Student
     {
         private string firstName;
         public string FirstName
@@ -59,7 +59,7 @@ namespace _03.Students
                 }
             }
         }
-        public Students(string firstName, string lastName, byte age, List<int> marks)
+        public Student(string firstName, string lastName, byte age, List<int> marks)
         {
             FirstName = firstName;
             LastName = lastName;

@@ -5,14 +5,15 @@ using System.Text;
 
 namespace _01.School
 {
-    public class Teachers : Person, IComments
+    public class Teacher : Person, IComments
     {
-        public List<Disciplines> Discplines { get; set; }
+        public List<Discipline> Discplines { get; set; }
                
-        public Teachers(string name) : base(name)
+        public Teacher(string name) : base(name)
         {
-            this.Discplines = new List<Disciplines>();
+            this.Discplines = new List<Discipline>();
             this.Name = name;
+            this.Comments = new List<string>();
         }
         public List<string> Comments { get; set; }
 

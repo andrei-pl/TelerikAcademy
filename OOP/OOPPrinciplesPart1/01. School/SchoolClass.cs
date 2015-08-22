@@ -7,16 +7,17 @@ namespace _01.School
 {
     public class SchoolClass : IComments
     {
-        List<Teachers> teachers;
-        List<Students> students;
+        List<Teacher> teachers;
+        List<Student> students;
 
         public string ClassID { get; set; }
 
         public SchoolClass(string ClassID)
         {
             this.ClassID = ClassID;
-            this.teachers = new List<Teachers>();
-            this.students = new List<Students>();
+            this.teachers = new List<Teacher>();
+            this.students = new List<Student>();
+            this.Comments = new List<string>();
         }
 
         public List<string> Comments { get; set; }

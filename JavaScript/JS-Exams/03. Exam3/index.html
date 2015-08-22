@@ -52,7 +52,7 @@
                     for (var i = 0; i < keyTemplate.length; i++) {
                         if (keyTemplate[i].Key == keyName) {
                             for (var j = 0; j < keyTemplate[i].Value.length; j++) {
-                                resultArr.push(keyTemplate[i].Value[j] + '\n');
+                                resultArr.push(keyTemplate[i].Value[j]);
                             }
                         }
                     }
@@ -65,16 +65,16 @@
                             break;
                         }
                     }
-                    resultArr.push(rowsForWork[index] + '\n');
+                    resultArr.push(rowsForWork[index]);
                 } else if (rowsForWork[index].indexOf('nk-if') != -1) {
                     var subStringModel = rowsForWork[index].substring(rowsForWork[index].indexOf('condition') + 11, rowsForWork[index].indexOf('>'));
                     var indexInside = index + 1;
 
-                    resultArr.push(rowsForWork[index] + '\n');
+                    resultArr.push(rowsForWork[index]);
                 }
 
                 else {
-                    resultArr.push(rowsForWork[index] + '\n');
+                    resultArr.push(rowsForWork[index]);
                 }
                 index++;
             }
@@ -96,7 +96,10 @@
                 }
             }
 
-            console.log(resultArr);
+            for (var i = 0; i < resultArr.length; i++) {
+                console.log(resultArr[i]);
+            }
+
         }
 
         var x = [

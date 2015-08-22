@@ -13,13 +13,13 @@ namespace _03.Students
     {
         static void Main(string[] args)
         {
-            Students[] students = { 
-                                      new Students("Joro", "Ivanov", 17, new List<int>{2,6}),  
-                                      new Students("Maria", "Petrova", 25, new List<int>{3,4}),  
-                                      new Students("Ivan", "Ivanov", 31, new List<int>{6,5}),  
-                                      new Students("Pesho", "Mitev", 22, new List<int>{4,6}),  
-                                      new Students("Niki", "Iliev", 24, new List<int>{2,2}), 
-                                      new Students("Niki", "Nikolov", 19, new List<int>{3,3}),
+            Student[] students = { 
+                                      new Student("Joro", "Ivanov", 17, new List<int>{2,6}),  
+                                      new Student("Maria", "Petrova", 25, new List<int>{3,4}),  
+                                      new Student("Ivan", "Ivanov", 31, new List<int>{6,5}),  
+                                      new Student("Pesho", "Mitev", 22, new List<int>{4,6}),  
+                                      new Student("Niki", "Iliev", 24, new List<int>{2,2}), 
+                                      new Student("Niki", "Nikolov", 19, new List<int>{3,3}),
                                   };
 
             var alphabetStudents = from s in students
@@ -59,7 +59,7 @@ namespace _03.Students
             //Create a List<Student> with sample students. Select only the students that are from group number 2. Use LINQ query. 
             //Order the students by FirstName.
 
-            var studentsGroup = new List<Students>(students);
+            var studentsGroup = new List<Student>(students);
 
             studentsGroup[0].GroupNumber = 1; studentsGroup[0].Email = "student1@abv.bg"; studentsGroup[0].Tel = "027776665"; studentsGroup[0].FN = "55040621";
             studentsGroup[1].GroupNumber = 2; studentsGroup[1].Email = "student2@gmail.com"; studentsGroup[1].Tel = "032555666"; studentsGroup[1].FN = "56040621";
@@ -161,7 +161,7 @@ namespace _03.Students
             Console.WriteLine(String.Join(Environment.NewLine, studentsInMath));
         }
 
-        private static void PrintStudents(IEnumerable<Students> students)
+        private static void PrintStudents(IEnumerable<Student> students)
         {
             foreach (var student in students)
             {

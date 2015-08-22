@@ -1,70 +1,18 @@
-﻿using System;
+﻿using HW_CSharp;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using Wintellect.PowerCollections;
-
-internal class Event : IComparable
-{
-    public DateTime date;
-
-    public string title;
-
-    public string location;
-
-    public Event(DateTime date, string title, string location)
-    {
-        this.date = date;
-        this.title = title;
-        this.location = location;
-    }
-
-    public int CompareTo(object obj)
-    {
-        int num;
-        Event other = obj as Event;
-        int byDate = this.date.CompareTo(other.date);
-        int byTitle = this.title.CompareTo(other.title);
-        int byLocation = this.location.CompareTo(other.location);
-        bool flag = byDate != 0;
-        if (flag)
-        {
-            num = byDate;
-        }
-        else
-        {
-            flag = byTitle != 0;
-            num = (flag ? byTitle : byLocation);
-        }
-        return num;
-    }
-
-    public override string ToString()
-    {
-        bool flag;
-        StringBuilder toString = new StringBuilder();
-        toString.Append(this.date.ToString("yyyy-MM-ddTHH:mm:ss"));
-        toString.Append(string.Concat(" | ", this.title));
-        flag = (this.location == null ? true : !(this.location != ""));
-        bool flag1 = flag;
-        if (!flag1)
-        {
-            toString.Append(string.Concat(" | ", this.location));
-        }
-        string str = toString.ToString();
-        return str;
-    }
-}
 
 internal class Program
 {
     private static StringBuilder output;
 
-    private static Program.EventHolder events;
+    private static EventHolder events;
 
     static Program()
     {
         Program.output = new StringBuilder();
-        Program.events = new Program.EventHolder();
+        Program.events = new EventHolder();
     }
 
     public Program()
@@ -167,134 +115,5 @@ internal class Program
             }
         }
         Console.WriteLine(Program.output);
-    }
-
-    private class EventHolder
-    {
-        private MultiDictionary<string, Event> byTitle;
-
-        private rderedBag<Event> byDate;
-
-        public EventHolder()
-        {
-        }
-
-        public void AddEvent(DateTime date, string title, string location)
-        {
-            Event newEvent = new Event(date, title, location);
-            this.byTitle.Add(title.ToLower(), newEvent);
-            this.byDate.Add(newEvent);
-            Program.Messages.EventAdded();
-        }
-
-        public void DeleteEvents(string titleToDelete)
-        {
-            bool flag;
-            string title = titleToDelete.ToLower();
-            int removed = 0;
-            IEnumerator<Event> enumerator = this.byTitle[title].GetEnumerator();
-            try
-            {
-                while (true)
-                {
-                    flag = enumerator.MoveNext();
-                    if (!flag)
-                    {
-                        break;
-                    }
-                    Event eventToRemove = enumerator.Current;
-                    removed++;
-                    this.byDate.Remove(eventToRemove);
-                }
-            }
-            finally
-            {
-                flag = enumerator == null;
-                if (!flag)
-                {
-                    enumerator.Dispose();
-                }
-            }
-            this.byTitle.Remove(title);
-            Program.Messages.EventDeleted(removed);
-        }
-
-        public void ListEvents(DateTime date, int count)
-        {
-            bool flag;
-            OrderedBag<Event>.View eventsToShow = this.byDate.RangeFrom(new Event(date, "", ""), true);
-            int showed = 0;
-            IEnumerator<Event> enumerator = eventsToShow.GetEnumerator();
-            try
-            {
-                while (true)
-                {
-                    flag = enumerator.MoveNext();
-                    if (!flag)
-                    {
-                        break;
-                    }
-                    Event eventToShow = enumerator.Current;
-                    flag = showed != count;
-                    if (flag)
-                    {
-                        Program.Messages.PrintEvent(eventToShow);
-                        showed++;
-                    }
-                    else
-                    {
-                        break;
-                    }
-                }
-            }
-            finally
-            {
-                flag = enumerator == null;
-                if (!flag)
-                {
-                    enumerator.Dispose();
-                }
-            }
-            flag = showed != 0;
-            if (!flag)
-            {
-                Program.Messages.NoEventsFound();
-            }
-        }
-    }
-
-    private static class Messages
-    {
-        public static void EventAdded()
-        {
-            Program.output.Append("Event added\n");
-        }
-
-        public static void EventDeleted(int x)
-        {
-            bool flag = x != 0;
-            if (flag)
-            {
-                Program.output.AppendFormat("{0} events deleted\n", x);
-            }
-            else
-            {
-                Program.Messages.NoEventsFound();
-            }
-        }
-
-        public static void NoEventsFound()
-        {
-            Program.output.Append("No events found\n");
-        }
-
-        public static void PrintEvent(Event eventToPrint)
-        {
-            bool flag = eventToPrint == null;
-            if (!flag)
-            {
-                Program.output.Append(string.Concat(eventToPrint, "\n"));
-            }
-        }
     }
 }

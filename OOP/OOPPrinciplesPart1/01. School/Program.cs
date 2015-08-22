@@ -10,18 +10,18 @@ namespace _01.School
     {
         static void Main(string[] args)
         {
-            Disciplines dis = new Disciplines("Math", 10, 8);
-            Disciplines[] disciplines = new Disciplines[1];
+            Discipline dis = new Discipline("Math", 10, 8);
+            Discipline[] disciplines = new Discipline[1];
             disciplines[0] = dis;
 
             Person men = new Person("Pesho");
 
-            Students ivan = new Students("Ivan", 13);
-            Students[] students = new Students[1];
+            Student ivan = new Student("Ivan", 13);
+            Student[] students = new Student[1];
             students[0] = ivan;
 
-            Teachers first = new Teachers("Joro");
-            Teachers[] teachers = new Teachers[1];
+            Teacher first = new Teacher("Joro");
+            Teacher[] teachers = new Teacher[1];
             teachers[0] = first;
 
             ivan.AddComment("pesho");
